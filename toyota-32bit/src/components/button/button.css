@@ -1,0 +1,55 @@
+.giris{
+    background-color: #000000;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 15px 40px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    width:calc(50% - 2px);
+
+    /* background-color: #CD0404;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: white;
+    width: 141px;
+    font-size: 1.3rem; */
+}
+
+.giris:hover{
+    transition: .2s;
+    background-color: #404040;
+}
+
+.kapat{
+    background-color: #e60000;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 15px 40px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    width:calc(50% - 2px);
+
+    /* background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: white;
+    width: 141px;
+    font-size: 1.3rem; */
+}
+
+.kapat:hover{
+    background-color: #ff0000;
+    transition: .2s;
+}
+
+
