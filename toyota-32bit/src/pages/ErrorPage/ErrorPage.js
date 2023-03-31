@@ -43,7 +43,12 @@ function ErrorPage() {
                             <div className='button'>HIZLI KAYDET</div>
                             <div className='button'>KAYDET VE GEÇ</div>
                             <div className='button'>HATA KAYIT</div>
-                            <div className='button'>MONTAJ NO</div>
+                            <div className='montaj-no'>
+                                <label>
+                                    MONTAJ NO
+                                    <input type="text"/>
+                                </label>
+                            </div>
                             <div className='button'>ARA</div>
                             <div className='button'>TERMİNAL İLK RESMİ</div>
                             <div className='button'>SIK GELEN HATA</div>
