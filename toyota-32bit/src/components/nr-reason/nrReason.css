@@ -1,0 +1,14 @@
+select {
+    color: white;
+    background-color: #333;
+    padding: 0.3rem;
+    border-radius: 0.25rem;
+    border: none;
+    font-size: .8rem;
+}
+
+
+option {
+    color: black;
+    background-color: white;
+}
