@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .Toastify__toast--success.toastMessage {
+    background: none;
+    color: white;
+    font-size: 20px;
+    background-color: green ;
+  }
+  
+  .App {
+    font-size:smaller;
+    background-color:#B3E5BE;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .bottom-grid{
+    height: 20vh;
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    width: 100%;
+  }
+  
+  th,
+  td {
+    border: 1px solid black;
+    padding: .3rem;
+    text-align: center;
+  }
+  
+  th {
+    font-weight:800;
+    text-align: center;
+  }
+  
+  .partName{
+    color: #B22727;
+    font-weight: 600;
+    width: 270px;
+    text-align: start;
+  }
+  
+  .saveIcon{
+    color: white;
+    background-color: black;
+    width: 100%;
+    font-size: 20px;
+    border: 1px solid;
+    border-radius: 5px;
+    padding-top: .15rem;
+    padding-bottom: .15rem;
+  }
+  
+  .saveIcon:hover{
+    background-color: white;
+    color: black;
+    transition: .3s;
+  }
+  
+  .edit,
+  .delete{
+    color: white;
+    background-color: red;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 5px 10px ;
+    margin-right: 5px;
+    width: 1.2rem;
+  }
+  
+  .edit:hover,
+  .delete:hover{
+    color: red;
+    background-color: white;
+    transition: .3s;
+  }
