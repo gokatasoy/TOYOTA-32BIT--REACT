@@ -1,0 +1,123 @@
+.BottomGrid{
+    display: flex;
+    height: 20vh;
+    background-color: #e6e6e6;
+    border: 1px solid;
+}
+
+.montaj-body{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-direction: column;
+    border: 1px solid;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 37px;
+    width: 40%;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+input {
+    margin-left: 5px;
+    width: 225px;
+    padding: 4px 15px;
+    height: 47px;
+    font-size: 20px;
+    border-radius: 4px;
+    border: 1px solid gray;
+}
+
+/* SEARCH BUTTON */
+.search-button {
+    padding: 8px 16px;
+    border: 1px solid;
+    border-radius: 4px;
+    background-color: #cccccc;
+    cursor: pointer;
+    user-select: none;
+    margin-left: 5px;
+    margin-right: 20px;
+}
+
+.search-button:hover{
+    background-color: #a6a6a6;
+    transition: .2s;
+}
+
+.search-button:active{
+    background-color: #737373;
+    transition: .2s;
+}
+
+/* UPDOWN BUTTON */
+.updown-button{
+    background-color: #ff3333 !important;
+    width: 80px;
+    text-align: center;
+    padding: 10px 16px;
+    border: 1px solid;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 5px;
+    user-select: none;
+}
+
+.updown-button:hover{
+    background-color: #e60000 !important; 
+    transition: .2s;
+}
+
+.updown-button:active{
+    background-color: #fff !important;
+    color: #e60000;
+}
+
+/* RANDOM BUTTONS */
+.car-list,
+.manuel-error,
+.multiple-error,
+.error-list,
+.error-copy,
+.exit{
+    border: 1px solid;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 30px;
+    width: 10% ;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 700;
+    background-color: #cccccc;
+    cursor: pointer;
+    user-select: none;
+}
+
+.car-list:hover,
+.manuel-error:hover,
+.multiple-error:hover,
+.error-list:hover,
+.error-copy:hover,
+.exit:hover{
+    background-color: #a6a6a6;
+    transition: .2s;
+}
+
+.car-list:active,
+.manuel-error:active,
+.multiple-error:active,
+.error-list:active,
+.error-copy:active,
+.exit:active{
+    background-color: #737373;
+    transition: .2s;
+}
