@@ -33,7 +33,7 @@ function ErrorPage() {
                             </div>
                             <div className='checkbox'> 
                                 <label>
-                                    <input type="checkbox"/>
+                                    <input type="checkbox" />
                                     RDD
                                 </label>
                             </div>

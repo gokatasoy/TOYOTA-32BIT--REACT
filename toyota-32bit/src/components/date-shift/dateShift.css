@@ -26,21 +26,21 @@
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    padding: 20px;
+    padding: 22px;
     /* margin-bottom: 20px;
     margin-top: 10px; */
     border: 1px solid;
     border-radius: 5px;
     font-size: 20px;
     font-weight: 700;
-    width: 100%;
 }
 
 .date-shift select{
     padding: 12px 10px;
     margin: 1px;
-    font-size: 20px;
+    font-size: 15px;
     border-radius: 5px;
+    outline: none;
 }
 
 .date-shift .yil{
