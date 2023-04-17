@@ -1,5 +1,5 @@
 import './App.css';
-// import TerminalList from './pages/TerminalList/TerminalList';
+import TerminalList from './pages/TerminalList/TerminalList';
 // import TerminalLogin from './pages/TerminalLogin/TerminalLogin';
 // import ErrorPage from './pages/ErrorPage/ErrorPage';
 // import ErrorList from "./pages/ErrorList/ErrorList"
@@ -7,7 +7,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      {/* <TerminalList/> */}
+      <TerminalList/>
       {/* <TerminalLogin/> */}
       {/* <ErrorPage/> */}
       {/* <ErrorList/> */}
