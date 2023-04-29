@@ -3,8 +3,22 @@ import "./terminalLogin.css"
 import DateShift from "../../components/date-shift/DateShift"
 import Button from "../../components/button/Button"
 import Keyboard from "../../components/keyboard/Keyboard"
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+
 
 function TerminalLogin() {
+    const [veri, setVeri] = useState([])
+
+    useEffect(() => {
+        axios.get("./first-login.json")
+            .then(res => setVeri(res.data))
+            .catch(error => {
+            console.log(error);
+            setVeri("An error occurred while fetching data");
+            });
+        }, []);
+
     // LOGIN & CLOSE BUTTONS
     const handleLoginClick = () => {
         alert('Giriş yaptınız');
@@ -20,15 +34,16 @@ function TerminalLogin() {
                 <div className='terminal-name'>
                     <h1>Terminal Name</h1>
                 </div>
+
                 <div className='form-container'>
                     <div className='section'>
                         <label>Terminal Listesi:</label>
-                        <select className='select-terminal-list'>
-                            <option>option1</option>
-                            <option>option2</option>
-                            <option>option3</option>
-                        </select>
+                            <select className='select-terminal-list'>
+                                {veri.map(({termName}) => (
+                                <option key={veri.termId}>{termName}</option>))}
+                            </select>
                     </div>
+                    
                     <div className='section'>
                         <label>Sicil No:</label>
                         <input type="text" placeholder='sicil no' />

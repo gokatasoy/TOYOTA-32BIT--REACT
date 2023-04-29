@@ -7,15 +7,15 @@ function BottomGrid() {
     return (
         <div className='BottomGrid'>
             <div className='montaj-body'>
-                <div className='section'>
+                <div className='bottomGridSection'>
                     <label>MONTAJ NO:</label>
                     <input/>
                     <span className='search-button'>ARA</span>
                     <FontAwesomeIcon className='updown-button' icon={faChevronUp} />
                 </div>
-                <div className='section'>
+                <div className='bottomGridSection'>
                     <label>BODY NO:</label>
-                    <input/>
+                    <input className='bottomGridInput'/>
                     <span className='search-button'>ARA</span>
                     <FontAwesomeIcon className='updown-button' icon={faChevronDown} />
                 </div>

@@ -22,6 +22,7 @@ function TerminalList() {
             <div className='sectionTitle'>BÖLÜM BAZINDA</div>
             <div className='filterTitle'>FİLTRE BAZINDA</div>
         </div>
+        
         {veri.map(({ depName,shopCode, filterBaseds }) => (
         <div key={depName}>
             <ul>

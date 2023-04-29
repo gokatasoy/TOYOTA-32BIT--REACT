@@ -89,3 +89,12 @@
     font-size: 13px;
     margin-left: 10px;
 }
+
+.filterSide:hover{
+    background-color: #d9f2de;
+    transition: .2s;
+}
+
+.filterSide:active{
+    background-color: #54c46b;
+}

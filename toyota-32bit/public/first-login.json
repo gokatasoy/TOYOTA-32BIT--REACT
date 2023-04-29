@@ -1,6 +1,4 @@
-{
-   "type":"SUCCESS",
-   "data":[
+[
       {
          "termId":82842,
          "depCode":"AI",
@@ -272,4 +270,3 @@
          "filterCode":"HAT"
       }
    ]
-}
