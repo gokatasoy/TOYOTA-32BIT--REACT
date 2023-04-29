@@ -30,7 +30,7 @@
 }
 
 /* IMAGE SECTION */
-.row{
+.error-page-container .row{
     display: flex;
 }
 
@@ -45,7 +45,7 @@
 }
 
 /* CONTAINER*/
-.container{
+.row .container{
     display: flex;
     flex-direction: column;
 }
@@ -66,7 +66,7 @@
     margin-top: 10px;
 }
 
-input[type="checkbox"]{
+.row input[type="checkbox"]{
     height: 30px;
     width: 30px;
     border-radius: 5px;
@@ -89,7 +89,7 @@ input[type="checkbox"]{
     flex-direction: row;
 }
 
-.button{
+.button-container .button{
     border: 1px solid;
     border-radius: 10px;
     margin: 2px;

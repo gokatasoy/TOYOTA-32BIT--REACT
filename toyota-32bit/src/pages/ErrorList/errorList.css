@@ -68,8 +68,8 @@
     transition: .3s;
   }
   
-  .edit,
-  .delete{
+  .editIcon,
+  .deleteIcon{
     color: white;
     background-color: red;
     border: 1px solid;
@@ -79,8 +79,8 @@
     width: 1.2rem;
   }
   
-  .edit:hover,
-  .delete:hover{
+  .editIcon:hover,
+  .deleteIcon:hover{
     color: red;
     background-color: white;
     transition: .3s;

@@ -50,7 +50,7 @@
     width: 88%;
 }
 
-.container{
+.terminal-list .container{
     display: flex;
     justify-content: flex-start;
     align-items: center;

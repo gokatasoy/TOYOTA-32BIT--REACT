@@ -40,7 +40,7 @@
     align-items: flex-end;
 }
 
-.section{
+.form-container .section{
     padding: 10px;
     display:flex;
     align-items: center;
@@ -55,14 +55,14 @@
     justify-content: center;
 }
 
-.section label{
+.form-container .section label{
     margin-right: 5px;
     font-size: 20px;
     font-weight: 700;
 }
 
-.section input, 
-.section .select-terminal-list{
+.form-container .section input, 
+.form-container .section .select-terminal-list{
     padding: 10px;
     font-size: 20px;
     border: 1px solid grey;
@@ -70,8 +70,8 @@
     width: 300px;
 }
 
-.section input:focus,
-.section .select-terminal-list:focus
+.form-container .section input:focus,
+.form-container .section .select-terminal-list:focus
 {
     background-color: #e6faff;
     outline: none;

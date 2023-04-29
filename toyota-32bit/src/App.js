@@ -1,8 +1,8 @@
 import './App.css';
 // import TerminalList from './pages/TerminalList/TerminalList';
-import TerminalLogin from './pages/TerminalLogin/TerminalLogin';
+// import TerminalLogin from './pages/TerminalLogin/TerminalLogin';
 // import ErrorPage from './pages/ErrorPage/ErrorPage';
-// import ErrorList from "./pages/ErrorList/ErrorList"
+import ErrorList from "./pages/ErrorList/ErrorList"
 import { Routes, Route, Link, NavLink } from 'react-router-dom';
 
 function App() {
@@ -11,14 +11,14 @@ function App() {
       {/* <Routes>
         <Route path='/' element={<TerminalList/>} />
         <Route path='/terminalLogin' element={<TerminalLogin/>} />
-        <Route path='/errorPage' element={<ErrorPage/>} />
-        <Route path='/errorList' element={<ErrorList/>} />
+        <Route path='/terminalLogin/errorPage' element={<ErrorPage/>} />
+        <Route path='/terminalLogin/errorPage/errorList' element={<ErrorList/>} />
       </Routes> */}
 
       {/* <TerminalList/> */}
-      <TerminalLogin/>
+      {/* <TerminalLogin/> */}
       {/* <ErrorPage/> */}
-      {/* <ErrorList/> */}
+      <ErrorList/>
     </div>
   );
 }

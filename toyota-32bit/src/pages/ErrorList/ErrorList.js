@@ -88,8 +88,8 @@ function App() {
                     <FontAwesomeIcon className='saveIcon' icon={faSave} onClick={handleSave} />
                   </td>
                   <td>
-                    <FontAwesomeIcon className='edit' icon={faPen} />
-                    <FontAwesomeIcon className='delete' icon={faTrash} />
+                    <FontAwesomeIcon className='editIcon' icon={faPen} />
+                    <FontAwesomeIcon className='deleteIcon' icon={faTrash} />
                   </td>
                 </tr>
               )
