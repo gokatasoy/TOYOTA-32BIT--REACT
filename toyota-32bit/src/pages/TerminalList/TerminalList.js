@@ -1,7 +1,7 @@
 import './terminalList.css';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { Routes, Route, Link, NavLink, useNavigate} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 // import { BrowserRouter as Router } from 'react-router-dom';
 
 function TerminalList() {

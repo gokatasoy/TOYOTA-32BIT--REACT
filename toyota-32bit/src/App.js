@@ -3,7 +3,7 @@ import TerminalList from './pages/TerminalList/TerminalList';
 import TerminalLogin from './pages/TerminalLogin/TerminalLogin';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
 import ErrorList from "./pages/ErrorList/ErrorList"
-import { Routes, Route, Link, NavLink } from 'react-router-dom';
+import { Routes, Route} from 'react-router-dom';
 
 function App() {
   return (

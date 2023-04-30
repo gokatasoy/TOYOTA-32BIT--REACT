@@ -5,10 +5,11 @@ import Button from "../../components/button/Button"
 import Keyboard from "../../components/keyboard/Keyboard"
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-
+import { useNavigate } from 'react-router-dom'
 
 function TerminalLogin() {
     const [veri, setVeri] = useState([])
+    let navigate = useNavigate();
 
     useEffect(() => {
         axios.get("./first-login.json")
@@ -21,11 +22,11 @@ function TerminalLogin() {
 
     // LOGIN & CLOSE BUTTONS
     const handleLoginClick = () => {
-        alert('Giriş yaptınız');
+        navigate("/errorPage")
     };
     
     const handleCloseClick = () => {
-        alert('Çkış yaptınız.');
+        navigate("/");
     };
 
     return (
