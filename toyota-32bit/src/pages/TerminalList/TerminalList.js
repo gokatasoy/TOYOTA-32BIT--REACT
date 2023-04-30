@@ -18,7 +18,7 @@ function TerminalList() {
     }, []);
 
     const handleTerminalClick = () => {
-        navigate('/terminalLogin');
+        navigate('/terminal-login');
     }
 
     return (

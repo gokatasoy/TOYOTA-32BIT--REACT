@@ -1,10 +1,10 @@
 import React from 'react'
-import "./errorPage.css"
-import ErrorPageHeader from '../../components/error-page-header/ErrorPageHeader'
+import "./defectPage.css"
+import DefectPageHeader from '../../components/defect-page-header/DefectPageHeader'
 import dummyCar from "../../dummy-car.jpeg" 
 import { useNavigate } from 'react-router-dom'
 
-function ErrorPage() {
+function DefectPage() {
     let navigate = useNavigate()
 
     const handleCloseClick = () => {
@@ -12,18 +12,18 @@ function ErrorPage() {
     }
 
     const handleBackClick = () => {
-        navigate("/terminalLogin")
+        navigate("/terminal-login")
     }
 
-    const handleErrorListClick = () => {
-        navigate("/errorList")
+    const handleDefectListClick = () => {
+        navigate("/defect-list")
     }
 
     return (
-        <div className='error-page-grid'>
-            <div className='error-page-container'>
+        <div className='defect-page-grid'>
+            <div className='defect-page-container'>
                 <div className='header-container'>
-                    <ErrorPageHeader/>
+                    <DefectPageHeader/>
                 </div>
                 <div className='row'>                  
                     <div className='image-container'>
@@ -32,7 +32,7 @@ function ErrorPage() {
                             <div className='button' onClick={handleCloseClick}>ÇIKIŞ</div>
                             <div className='button' onClick={handleBackClick}>GERİ</div>
                             <div className='button'>MODEL İLK RESMİ</div>
-                            <div className='button' onClick={handleErrorListClick}>HATA LİSTESİ</div>
+                            <div className='button' onClick={handleDefectListClick}>HATA LİSTESİ</div>
                             <div className='button'>TEMİZLE</div>
                             <div className='button'>BÜYÜK FONT</div>
                         </div>
@@ -78,4 +78,4 @@ function ErrorPage() {
     )
 }
 
-export default ErrorPage
+export default DefectPage

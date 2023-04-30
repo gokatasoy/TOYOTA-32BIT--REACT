@@ -1,4 +1,4 @@
-import './errorList.css';
+import './defectList.css';
 import { useState, useEffect } from "react";
 import axios from "axios";
 import  NrReason  from "../../components/nr-reason/NrReason"

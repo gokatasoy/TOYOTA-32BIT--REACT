@@ -1,9 +1,9 @@
 import React from 'react'
-import "./errorPageHeader.css"
+import "./defectPageHeader.css"
 
-function ErrorPageHeader() {
+function DefectPageHeader() {
     return (
-        <div className='error-page-container-component'>
+        <div className='defect-page-container-component'>
             <div className='container-left'>
                 <div className='montaj-no-container'>
                     <div>MONTAJ NO</div>
@@ -31,4 +31,4 @@ function ErrorPageHeader() {
     )
 }
 
-export default ErrorPageHeader
+export default DefectPageHeader

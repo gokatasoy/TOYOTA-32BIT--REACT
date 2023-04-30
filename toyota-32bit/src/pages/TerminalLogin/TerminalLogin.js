@@ -23,7 +23,7 @@ function TerminalLogin() {
 
     // LOGIN & CLOSE BUTTONS
     const handleLoginClick = () => {
-        navigate("/errorPage")
+        navigate("/defect-page")
     };
     
     const handleCloseClick = () => {

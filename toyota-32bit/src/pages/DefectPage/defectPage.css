@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-.error-page-grid{
+.defect-page-grid{
     height: 100vh;
     width: 100%;
     padding: 20px;
@@ -14,7 +14,7 @@
     background-color: #B3E5BE;
 }
 
-.error-page-container{
+.defect-page-container{
     border: 1px solid grey;
     border-radius: 5px;
     width: 60%;
@@ -30,7 +30,7 @@
 }
 
 /* IMAGE SECTION */
-.error-page-container .row{
+.defect-page-container .row{
     display: flex;
 }
 
