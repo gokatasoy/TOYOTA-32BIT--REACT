@@ -1,10 +1,12 @@
 import './terminalList.css';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { Routes, Route, Link, NavLink, useNavigate} from 'react-router-dom';
 // import { BrowserRouter as Router } from 'react-router-dom';
 
 function TerminalList() {
     const [veri, setVeri] = useState([]);
+    let navigate = useNavigate();
 
     useEffect(() => {
     axios.get("./terminals.json")
@@ -14,6 +16,10 @@ function TerminalList() {
         setVeri("An error occurred while fetching data");
         });
     }, []);
+
+    const handleTerminalClick = () => {
+        navigate('/terminalLogin');
+    }
 
     return (
     <div className="terminal-list">
@@ -32,7 +38,9 @@ function TerminalList() {
                         <h2 >{depName}</h2>  
                 </div>
                     {filterBaseds.map(({ filterCode, linkCount }) => (
-                    <li className='filterSide' key={filterCode}>{filterCode}</li>
+                    <li className='filterSide' key={filterCode} onClick={handleTerminalClick}>
+                        {filterCode}
+                    </li>
                     ))}
                 </div>
             </ul>

@@ -9,7 +9,7 @@ function BottomGrid() {
             <div className='montaj-body'>
                 <div className='bottomGridSection'>
                     <label>MONTAJ NO:</label>
-                    <input/>
+                    <input className='bottomGridInput'/>
                     <span className='search-button'>ARA</span>
                     <FontAwesomeIcon className='updown-button' icon={faChevronUp} />
                 </div>
