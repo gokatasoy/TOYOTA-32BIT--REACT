@@ -9,6 +9,7 @@ import { useNavigate } from 'react-router-dom'
 
 function TerminalLogin() {
     const [veri, setVeri] = useState([])
+    
     let navigate = useNavigate();
 
     useEffect(() => {

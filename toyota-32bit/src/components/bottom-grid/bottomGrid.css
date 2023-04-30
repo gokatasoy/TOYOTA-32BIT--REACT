@@ -59,7 +59,7 @@
 
 /* UPDOWN BUTTON */
 .updown-button{
-    background-color: #ff3333 !important;
+    background-color: red !important;
     width: 80px;
     text-align: center;
     padding: 10px 16px;

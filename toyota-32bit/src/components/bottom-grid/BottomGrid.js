@@ -2,8 +2,15 @@ import React from 'react'
 import "./bottomGrid.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from 'react-router-dom';
 
 function BottomGrid() {
+    let navigate = useNavigate();
+
+    const handleCloseClick = () => {
+    navigate("/")
+    }
+
     return (
         <div className='BottomGrid'>
             <div className='montaj-body'>
@@ -25,7 +32,7 @@ function BottomGrid() {
             <div className='multiple-error'>ÇOKLU HATA</div>
             <div className='error-list'>HATA LİSTESİ</div>
             <div className='error-copy'>HATA KOPYA</div>
-            <div className='exit'>ÇIKIŞ YAP</div>
+            <div className='exit' onClick={handleCloseClick}>ÇIKIŞ YAP</div>
         </div>
     )
 }
