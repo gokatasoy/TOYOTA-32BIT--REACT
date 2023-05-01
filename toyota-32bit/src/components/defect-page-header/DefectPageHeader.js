@@ -33,14 +33,14 @@ function DefectPageHeader() {
                     </div>
                     
                     <div className='container-right'>
-                        <div className='color-container'>
+                        <div style={{backgroundColor: bgColor}} className='color-container'>
                             <div>Renk</div>
                             <div>{extCode}</div>
                         </div>
                         <div className='username-container'>
-                            <div>{firstname}</div>
-                            <div>{lastname}</div>
-                            <div>{departmentCode}</div>
+                            <div style={{marginRight: ".5rem"}}>{firstname}</div>
+                            <div style={{marginRight: ".5rem"}}>{lastname}</div>
+                            <div>({departmentCode})</div>
                         </div>
                     </div>
                 </div>
