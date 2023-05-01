@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.BigFont-grid{
+    padding: 30px;
+}
+
+.defect-page-header{
+    background-color: #999999;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.BigFont-grid-container{
+    height: 100vh;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #B3E5BE;
+}
+
+.BigFont-row{
+    display: flex;
+    width: 100%;
+}
+
+.vehicle-data{
+    background-color: red;
+    width: 85%;
+    height: 55vh;
+    font-size: 180px;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.defect-entry-container{
+    background-color: yellow;
+    width: 15%;
+}
+
+.defect-data{
+    background-color: green;
+    width: 100%;
+    height: 25vh;
+}

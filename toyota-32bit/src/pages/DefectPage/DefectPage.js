@@ -19,6 +19,10 @@ function DefectPage() {
         navigate("/defect-list")
     }
 
+    const handleBigFontClick = () => {
+        navigate("/big-font")
+    }
+
     return (
         <div className='defect-page-grid'>
             <div className='defect-page-container'>
@@ -34,7 +38,7 @@ function DefectPage() {
                             <div className='button'>MODEL İLK RESMİ</div>
                             <div className='button' onClick={handleDefectListClick}>HATA LİSTESİ</div>
                             <div className='button'>TEMİZLE</div>
-                            <div className='button'>BÜYÜK FONT</div>
+                            <div className='button' onClick={handleBigFontClick}>BÜYÜK FONT</div>
                         </div>
                     </div>
 
