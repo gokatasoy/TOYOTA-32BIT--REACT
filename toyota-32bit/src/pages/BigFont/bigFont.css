@@ -29,8 +29,12 @@
     width: 100%;
 }
 
+.defect{
+    flex-direction: column;
+}
+
 .vehicle-data{
-    background-color: red;
+    /* background-color: red; */
     width: 85%;
     height: 55vh;
     font-size: 180px;
@@ -42,12 +46,16 @@
 }
 
 .defect-entry-container{
-    background-color: yellow;
+    /* background-color: yellow; */
     width: 15%;
 }
 
 .defect-data{
-    background-color: green;
+    /* background-color: green; */
     width: 100%;
-    height: 25vh;
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    font-weight: 700;
+    padding: 10px 0;
 }

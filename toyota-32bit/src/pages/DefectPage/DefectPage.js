@@ -3,6 +3,7 @@ import "./defectPage.css"
 import DefectPageHeader from '../../components/defect-page-header/DefectPageHeader'
 import dummyCar from "../../dummy-car.jpeg" 
 import { useNavigate } from 'react-router-dom'
+import AssyNo from '../../components/assy-no/AssyNo'
 
 function DefectPage() {
     let navigate = useNavigate()
@@ -62,13 +63,7 @@ function DefectPage() {
                             <div className='button'>HIZLI KAYDET</div>
                             <div className='button'>KAYDET VE GEÇ</div>
                             <div className='button'>HATA KAYIT</div>
-                            <div className='montaj-no'>
-                                <label>
-                                    MONTAJ NO
-                                    <input type="text"/>
-                                </label>
-                            </div>
-                            <div className='button'>ARA</div>
+                            <div><AssyNo/></div>
                             <div className='button'>TERMİNAL İLK RESMİ</div>
                             <div className='button'>SIK GELEN HATA</div>
                             <div className='button'>MANİFEST</div>
