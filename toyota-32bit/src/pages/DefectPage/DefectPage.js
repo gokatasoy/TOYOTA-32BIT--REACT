@@ -1,26 +1,12 @@
 import React from "react";
 import "./defectPage.css";
 import DefectPageHeader from "../../components/defect-page-header/DefectPageHeader";
-import dummyCar from "../../dummy-car.jpeg";
+import DefectedCar from "../../components/defected-car/DefectedCar";
 import { useNavigate } from "react-router-dom";
 import AssyNo from "../../components/assy-no/AssyNo";
-import { useEffect, useState } from "react";
-import axios from "axios";
 
 function DefectPage() {
     let navigate = useNavigate();
-
-    const [boxesData, setBoxesData] = useState([]);
-
-    useEffect(() => {
-        axios
-            .get("./picture-data.json")
-            .then((res) => setBoxesData(res.data))
-            .catch((error) => {
-                console.log(error);
-                setBoxesData("An error occured while fetching data.");
-            });
-    }, []);
 
     const handleCloseClick = () => {
         navigate("/");
@@ -47,61 +33,11 @@ function DefectPage() {
 
                 <div className="row">
                     {/* IMAGE CONTAINER */}
-                    <div className="image-container" style={{position: "relative"}}>
-                        <img src={dummyCar} alt="dummy-car" />
-                        <div className="box-container">
-                            {boxesData.map(({ defectButtonRecords }) => (
-                                <div key={defectButtonRecords}>
-                                    {defectButtonRecords.map(
-                                        ({
-                                            buttonId,
-                                            boxX,
-                                            boxY,
-                                            boxWidth,
-                                            boxHeight,
-                                            boxColor,
-                                            labelColor,
-                                            labelText,
-                                        }) => (
-                                            <div
-                                                key={buttonId}
-                                                className="box"
-                                                style={{
-                                                    left: boxX + "px",
-                                                    top: boxY + "px",
-                                                    width: boxWidth + "px",
-                                                    height: boxHeight + "px",
-                                                    border: `6px solid ${boxColor}`,
-                                                    borderRadius:"5px",
-                                                    color: labelColor,
-                                                }}
-                                            >
-                                                <div 
-                                                className="label-text"
-                                                style={{
-                                                    // // height: "50%",
-                                                    padding:"2px",
-                                                    width: "100%",
-                                                    color: labelColor,
-                                                    backgroundColor: "white",
-                                                    position: "absolute",
-                                                    top: 0,
-                                                    left: 0,
-                                                    display: "flex",
-                                                    justifyContent: "center",
-                                                    alignItems: "center",
-                                                }}
-                                                >
-                                                    {labelText}
-                                                </div>
-                                            </div>
-                                        )
-                                    )}
-                                </div>
-                            ))}
-                        </div>
+                    <div className="col-1" style={{position: "relative"}}>
 
-                        <div className="button-container button-container-bottom">
+                        <DefectedCar/>
+                                                        
+                        <div className="col-2 button-container button-container-bottom">
                             <div className="button" onClick={handleCloseClick}>
                                 ÇIKIŞ
                             </div>
