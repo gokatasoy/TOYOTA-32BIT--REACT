@@ -49,7 +49,7 @@ function DefectPage() {
                     {/* IMAGE CONTAINER */}
                     <div className="image-container">
                         <img src={dummyCar} alt="dummy-car" />
-                        <div className="box-containerr">
+                        <div className="box-container">
                             {boxesData.map(({ defectButtonRecords }) => (
                                 <div key={defectButtonRecords}>
                                     {defectButtonRecords.map(
@@ -71,11 +71,28 @@ function DefectPage() {
                                                     top: boxY + "px",
                                                     width: boxWidth + "px",
                                                     height: boxHeight + "px",
-                                                    backgroundColor: boxColor,
+                                                    border: `4px solid ${boxColor}`,
                                                     color: labelColor,
                                                 }}
                                             >
-                                                {labelText}
+                                                <div 
+                                                className="label-text"
+                                                style={{
+                                                    // // height: "50%",
+                                                    padding:"1px",
+                                                    width: "100%",
+                                                    color: labelColor,
+                                                    backgroundColor: "white",
+                                                    position: "absolute",
+                                                    top: 0,
+                                                    left: 0,
+                                                    display: "flex",
+                                                    justifyContent: "center",
+                                                    alignItems: "center",
+                                                }}
+                                                >
+                                                    {labelText}
+                                                </div>
                                             </div>
                                         )
                                     )}
