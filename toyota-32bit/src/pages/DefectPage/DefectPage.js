@@ -47,7 +47,7 @@ function DefectPage() {
 
                 <div className="row">
                     {/* IMAGE CONTAINER */}
-                    <div className="image-container">
+                    <div className="image-container" style={{position: "relative"}}>
                         <img src={dummyCar} alt="dummy-car" />
                         <div className="box-container">
                             {boxesData.map(({ defectButtonRecords }) => (
@@ -71,7 +71,8 @@ function DefectPage() {
                                                     top: boxY + "px",
                                                     width: boxWidth + "px",
                                                     height: boxHeight + "px",
-                                                    border: `4px solid ${boxColor}`,
+                                                    border: `6px solid ${boxColor}`,
+                                                    borderRadius:"5px",
                                                     color: labelColor,
                                                 }}
                                             >
@@ -79,7 +80,7 @@ function DefectPage() {
                                                 className="label-text"
                                                 style={{
                                                     // // height: "50%",
-                                                    padding:"1px",
+                                                    padding:"2px",
                                                     width: "100%",
                                                     color: labelColor,
                                                     backgroundColor: "white",
@@ -99,6 +100,7 @@ function DefectPage() {
                                 </div>
                             ))}
                         </div>
+
                         <div className="button-container button-container-bottom">
                             <div className="button" onClick={handleCloseClick}>
                                 ÇIKIŞ
