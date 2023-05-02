@@ -79,6 +79,7 @@
     color: black;
     font-weight: 700;
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
     padding: 5px;
@@ -98,4 +99,17 @@
 
 .filterSide:active{
     background-color: #54c46b;
+}
+
+.child-box {
+    position: absolute;
+    top: 0px; /* adjust the distance from the top of the parent box */
+    right: 0px; /* adjust the distance from the right of the parent box */
+    width: 12px; /* set the width of the child box */
+    height: 12px; /* set the height of the child box */
+    border-radius: 3px;
+    text-align: center;
+    color: white;
+    background-color: #cc0000; /* set the background color of the child box */
+    font-size: 10px;
 }

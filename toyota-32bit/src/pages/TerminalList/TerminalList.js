@@ -38,8 +38,9 @@ function TerminalList() {
                         <h2 >{depName}</h2>  
                 </div>
                     {filterBaseds.map(({ filterCode, linkCount }) => (
-                    <li className='filterSide' key={filterCode} onClick={handleTerminalClick}>
+                    <li className='filterSide parent-box' key={filterCode} onClick={handleTerminalClick}>
                         {filterCode}
+                        <div className='child-box'>{linkCount   }</div>
                     </li>
                     ))}
                 </div>
