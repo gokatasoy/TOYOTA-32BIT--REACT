@@ -1,24 +1,22 @@
-import React from 'react'
-import dummyCar from "../../dummy-car.jpeg";
-import axios from "axios";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import Box from '../box/Box';
+import dummyCar from '../../dummy-car.jpeg';
 
 function DefectedCar() {
+    const [jsonData, setJsonData] = useState('./picture-data.json');
     const [boxesData, setBoxesData] = useState([]);
     const [carImage, setCarImage] = useState(dummyCar);
 
     useEffect(() => {
-        axios
-            .get("./picture-data.json")
-            .then((res) => setBoxesData(res.data))
-            .catch((error) => {
-                console.log(error);
-                setBoxesData("An error occured while fetching data.");
-            });
-    }, []);
+        axios.get(jsonData)
+            .then(res => setBoxesData(res.data))
+            .catch(error => console.error(error));
+    }, [jsonData]);
 
-    const handleBoxClick = (buttonId, picAddress) => {
+    const handleBoxClick = (picAddress) => {
         setCarImage(picAddress);
+        setJsonData(jsonData === './picture-data.json' ? './picture-data2.json' : './picture-data.json');
     };
 
     return (
@@ -28,59 +26,19 @@ function DefectedCar() {
                 <div className="box-container">
                     {boxesData.map(({ defectButtonRecords }) => (
                         <div key={defectButtonRecords}>
-                            {defectButtonRecords.map(
-                                ({
-                                    buttonId,
-                                    boxX,
-                                    boxY,
-                                    boxWidth,
-                                    boxHeight,
-                                    boxColor,
-                                    labelColor,
-                                    labelText,
-                                    picAddress
-                                }) => (
-                                    <div
-                                        key={buttonId}
-                                        className="box"
-                                        style={{
-                                            left: boxX + "px",
-                                            top: boxY + "px",
-                                            width: boxWidth + "px",
-                                            height: boxHeight + "px",
-                                            border: `6px solid ${boxColor}`,
-                                            borderRadius:"5px",
-                                            color: labelColor,
-                                        }}
-                                        onClick={() => handleBoxClick(buttonId, picAddress)}
-                                    >
-                                        <div 
-                                            className="label-text"
-                                            style={{
-                                                // // height: "50%",
-                                                padding:"2px",
-                                                width: "100%",
-                                                color: labelColor,
-                                                backgroundColor: "white",
-                                                position: "absolute",
-                                                top: 0,
-                                                left: 0,
-                                                display: "flex",
-                                                justifyContent: "center",
-                                                alignItems: "center",
-                                            }}
-                                        >
-                                            {labelText}
-                                        </div>
-                                    </div>
-                                )
-                            )}
+                            {defectButtonRecords.map((boxData) => (
+                                <Box
+                                    key={boxData.buttonId}
+                                    boxData={boxData}
+                                    handleBoxClick={handleBoxClick}
+                                />
+                            ))}
                         </div>
                     ))}
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
-export default DefectedCar
+export default DefectedCar;
