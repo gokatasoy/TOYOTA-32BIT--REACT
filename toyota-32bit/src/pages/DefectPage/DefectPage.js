@@ -32,11 +32,8 @@ function DefectPage() {
                 </div>
 
                 <div className="row">
-                    {/* IMAGE CONTAINER */}
                     <div className="col-1" style={{position: "relative"}}>
-
-                        <DefectedCar/>
-                                                        
+                        <DefectedCar/>                                                     
                         <div className="col-2 button-container button-container-bottom">
                             <div className="button" onClick={handleCloseClick}>
                                 ÇIKIŞ
