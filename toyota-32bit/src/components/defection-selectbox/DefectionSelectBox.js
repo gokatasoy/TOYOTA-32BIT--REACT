@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import "./defectionSelectBox.css"
 
 function DefectionSelectBox() {
     const [selectedOption, setSelectedOption] = useState("");
@@ -19,7 +20,7 @@ function DefectionSelectBox() {
     },[])
 
     return (
-        <div className="nr-reason">
+        <div className="defection-select-box">
             <select value={selectedOption} onChange={handleChange}>
                 {data.map(({partDefects}) => (
                     partDefects.map(({defectName, defectId}) => (

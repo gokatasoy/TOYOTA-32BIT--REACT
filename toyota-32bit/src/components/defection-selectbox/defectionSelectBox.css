@@ -1,0 +1,14 @@
+.defection-select-box select {
+    color: black;
+    background-color: #B3E5BE;
+    padding: 0.3rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+
+.defection-select-box option {
+    color: black;
+    background-color: #B3E5BE;
+    font-weight: 700;
+}

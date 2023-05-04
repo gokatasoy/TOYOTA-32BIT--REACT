@@ -44,7 +44,7 @@ function DefectedCar() {
                             ))}
                         </div>
                     ))}
-                    <div className='nr-reason'>
+                    <div>
                         {showDefectionSelectBox && <DefectionSelectBox />}    
                     </div>
                 </div>
