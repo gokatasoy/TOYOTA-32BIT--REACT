@@ -3,7 +3,7 @@ import "./bigFont.css"
 import DefectPageHeader from '../../components/defect-page-header/DefectPageHeader'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
-import DefectEntry from '../../components/defect-entry/DefectEntry'
+import DefectEntryContainer from '../../components/defect-entry-container/DefectEntryContainer'
 
 const BigFont = () => {
 
@@ -43,7 +43,7 @@ return (
                     </div>
                 ))}
                 <div className='defect-entry-container'>
-                    <DefectEntry />
+                    <DefectEntryContainer />
                 </div>
             </div>
             <div className='BigFont-row defect'>

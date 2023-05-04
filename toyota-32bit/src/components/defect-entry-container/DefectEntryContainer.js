@@ -1,9 +1,9 @@
 import React from 'react'
-import "./defectEntry.css"
+import "./defectEntryContainer.css"
 import AssyNo from '../assy-no/AssyNo'
 import { useNavigate } from 'react-router-dom'
 
-function DefectEntry() {
+function DefectEntryContainer() {
     let navigate = useNavigate();
     const handleDefectPageClick = () => {
         navigate("/defect-page")
@@ -16,4 +16,4 @@ function DefectEntry() {
     )
 }
 
-export default DefectEntry
+export default DefectEntryContainer
