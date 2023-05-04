@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Box from '../box/Box';
 import dummyCar from '../../dummy-car.jpeg';
-import NrReason from '../nr-reason/NrReason';
+import DefectionSelectBox from '../defection-selectbox/DefectionSelectBox';
+import "./defectedCar.css"
 
 function DefectedCar() {
     const [jsonData, setJsonData] = useState('./picture-data.json');
@@ -26,26 +27,28 @@ function DefectedCar() {
     };
 
     return (
-        <div>
+        <div className='defected-car-grid'>
             <div className="image-container">
                 <img src={carImage} alt="dummy-car" />
                 <div className="box-container">
                     {boxesData.map(({ defectButtonRecords }) => (
                         <div key={defectButtonRecords}>
                             {defectButtonRecords.map((boxData) => (
-                                <>
-                                <Box
-                                    key={boxData.buttonId}
-                                    boxData={boxData}
-                                    handleBoxClick={handleBoxClick}
-                                />
-                                </>
+                                <div className='box-wrapper'>
+                                    <Box
+                                        key={boxData.buttonId}
+                                        boxData={boxData}
+                                        handleBoxClick={handleBoxClick}
+                                    />                                  
+                                </div>
                             ))}
                         </div>
                     ))}
+                    <div className='nr-reason'>
+                        {showDefectionSelectBox && <DefectionSelectBox />}    
+                    </div>
                 </div>
             </div>
-            {showDefectionSelectBox && <NrReason />}
         </div>
     );
 }
