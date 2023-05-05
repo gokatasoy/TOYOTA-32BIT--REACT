@@ -1,56 +1,96 @@
-.keyboard-grid{
-    border: 1px;
+.keyboard-container {
     background-color: #C9EEFF;
+    border: 1px solid #2F58CD;
+    border-radius: .6rem;
+}
+
+.keyboard-grid {
     padding: .2rem;
-    font-size: 1.4rem;
-    font-weight: 700;
     cursor: pointer;
     user-select: none;
 }
 
-.keyboard-grid .row{
+.keyboard-grid .row {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
 }
 
-.keyboard-grid .keys{
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    flex-direction: row;
+.keyboard-grid .keys {
+    font-size: 1.2rem;
+    width: 3.35rem;
     padding: .7rem 1rem;
     margin: .09rem;
-    font-size: 1.2rem;
     border: 1px solid #2F58CD;
-    border-radius: .2rem;
-}
-
-.keyboard-grid .keys:hover{
-    background-color: #97DEFF;
-}
-
-.keyboard-grid .keys:active{
-    background-color: #b3e7ff;
-}
-    
-.keyboard-grid .space{
-    width: 100%;
+    border-radius: .6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
 }
 
 .keyboard-grid .delete{
-    width: 9rem;
+    width: 6.7rem ;
 }
 
 .keyboard-grid .capslock{
-    width: 8rem;
+    width: 6.7rem ;
 }
 
-.keyboard-grid .smaller {
-    width: 4rem;
+.keyboard-grid .space {
+    width: 100%;
 }
 
-.keyboard-grid .bigger {
-    width: 4rem;
+.keyboard-grid .keys:hover {
+    background-color: #97DEFF;
 }
+
+.keyboard-grid .keys:active {
+    background-color: #b3e7ff;
+}
+
+/* @media screen and (min-device-width:1620px) and (max-device-width:1884px) {
+    .keyboard-grid .keys{
+        font-size: 1rem;
+        width: 2.5rem;
+    }
+
+    .keyboard-grid .delete {
+        font-size: 1rem ;
+        width: 5rem ;
+    }
+
+    .keyboard-grid .capslock {
+        font-size: 1rem ;
+        width: 5rem ;
+    }
+
+    .keyboard-grid .space{
+        width: 100%;
+    }
+}
+
+@media screen and (min-device-width:1350px) and (max-device-width:1619px) {
+    .keyboard-grid .keys{
+        font-size: .8rem;
+        width: 2rem;
+    }
+
+    .keyboard-grid .delete {
+        font-size: .8rem ;
+        width: 4rem ;
+    }
+
+    .keyboard-grid .capslock {
+        font-size: .8rem ;
+        width: 4rem ;
+    }
+
+    .keyboard-grid .space{
+        width: 100%;
+    }
+}
+
+@media screen and (min-device-width:1000px) and (max-device-width:1349px) {
+} */
