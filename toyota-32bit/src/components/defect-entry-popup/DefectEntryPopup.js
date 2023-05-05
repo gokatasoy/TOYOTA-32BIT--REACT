@@ -7,7 +7,7 @@ function DefectEntryPopup() {
         <div className='defect-entry-popup-grid'>
             <div className='defect-entry-popup-container'>
                 <div className='row'>
-                    <div className='terminal-name'><h1>Terminal Name</h1></div>
+                    <div className='terminal-name'>CVWQS</div>
                     <div className='common-defect'>SIK GELEN HATA</div>
                 </div>
                 <div className='row'>
