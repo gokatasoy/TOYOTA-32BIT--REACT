@@ -2,7 +2,11 @@ import React from 'react'
 import "./defectEntryPopup.css"
 import Keyboard from '../keyboard/Keyboard'
 
-function DefectEntryPopup() {
+function DefectEntryPopup({ onClose }) {
+
+    const handlePopupClose = () => {
+        onClose();
+    };
     return (
         <div className='defect-entry-popup-grid'>
             <div className='defect-entry-popup-container'>
@@ -42,7 +46,7 @@ function DefectEntryPopup() {
                         </div>
                         <div className='form-row button-grid'>
                             <button className='save'>KAYDET</button>
-                            <button className='cancel'>İPTAL</button>
+                            <button className='cancel' onClick={handlePopupClose}>İPTAL</button>
                         </div>
                     </div>
                 </div>

@@ -1,19 +1,32 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.defect-entry-popup-grid{
+/* .defect-entry-popup-grid{
     height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #B3E5BE;
+} */
+
+.defect-entry-popup-grid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
 }
 
-.defect-entry-popup-container{
+/* .defect-entry-popup-container{
     border: 1px solid grey;
     border-radius: 10px;
     width: 40%;
@@ -21,26 +34,34 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+} */
+
+.defect-entry-popup-container {
+    background-color: #B3E5BE;
+    padding: 20px;
+    border-radius: 7px;
+    width: 60%;
+    max-width: 750px;
 }
 
-.row{
+.row {
     display: flex;
     width: 100%;
 }
 
-.form-row label{
+.form-row label {
     text-align: left;
     width: 30%;
     font-size: 20px;
     font-weight: 700;
 }
 
-.top-bar{
+.top-bar {
     border-bottom: 1px solid grey;
     padding: 0 40px;
 }
 
-.terminal-name{
+.terminal-name {
     font-size: 25px;
     font-weight: 700;
     display: flex;
@@ -50,8 +71,8 @@
     border: none;
 }
 
-.common-defect{
-    width:38%;
+.common-defect {
+    width: 38%;
     font-size: 20px;
     font-weight: 700;
     display: flex;
@@ -60,22 +81,22 @@
     padding: 10px;
 }
 
-.form-container{
+.form-container {
     display: flex;
     flex-direction: column;
     width: 100%;
     padding: 0 40px;
 }
 
-.form-container .form-row{
+.form-container .form-row {
     padding: 10px;
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: flex-end;
     width: 100%;
 }
 
-.form-container .form-row input{
+.form-container .form-row input {
     padding: 10px;
     font-size: 20px;
     border: 1px solid grey;
@@ -83,26 +104,26 @@
     width: 70%;
 }
 
-.form-container .form-row input:focus{
+.form-container .form-row input:focus {
     background-color: #e6faff;
     outline: none;
 }
 
-.form-container .button-grid{
+.form-container .button-grid {
     padding: 10px;
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.keyboard-grid{
+.keyboard-grid {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.button-grid .save{
+.button-grid .save {
     background-color: #000000;
     color: white;
     font-size: 20px;
@@ -110,15 +131,16 @@
     padding: 15px 40px;
     border: 1px solid grey;
     border-radius: 5px;
-    width:calc(50% - 2px);
+    width: calc(50% - 2px);
 }
 
-.button-grid .save:hover{
-    transition: .2s;
-    background-color: #404040;
+.button-grid .save:hover {
+    transition: .3s;
+    background-color: #fff;
+    color: #000000;
 }
 
-.button-grid .cancel{
+.button-grid .cancel {
     background-color: #e60000;
     color: white;
     font-size: 20px;
@@ -126,10 +148,12 @@
     padding: 15px 40px;
     border: 1px solid grey;
     border-radius: 5px;
-    width:calc(50% - 2px);
+    width: calc(50% - 2px);
 }
 
-.button-grid .cancel:hover{
-    background-color: #ff0000;
-    transition: .2s;
+.button-grid .cancel:hover {
+    background-color: #fff;
+    border: 1px solid red;
+    color: red;
+    transition: .3s;
 }

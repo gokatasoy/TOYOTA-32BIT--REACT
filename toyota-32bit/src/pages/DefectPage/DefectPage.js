@@ -31,6 +31,11 @@ function DefectPage() {
         setShowPopup(true)
     }
 
+    const handlePopupClose = () => {
+        setShowPopup(false)
+    }
+
+
     return (
         <div className="defect-page-grid">
             <div className="defect-page-container">
@@ -90,7 +95,7 @@ function DefectPage() {
 
                 </div>
             </div>
-            {showPopup && <DefectEntryPopup/>}
+            {showPopup && <DefectEntryPopup onClose={handlePopupClose}/>}
         </div>
     );
 }
