@@ -4,15 +4,6 @@
     box-sizing: border-box;
 }
 
-/* .defect-entry-popup-grid{
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #B3E5BE;
-} */
-
 .defect-entry-popup-grid {
     position: fixed;
     top: 0;
@@ -26,16 +17,6 @@
     z-index: 1;
 }
 
-/* .defect-entry-popup-container{
-    border: 1px solid grey;
-    border-radius: 10px;
-    width: 40%;
-    height: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-} */
-
 .defect-entry-popup-container {
     background-color: #B3E5BE;
     padding: 20px;
@@ -44,24 +25,13 @@
     max-width: 750px;
 }
 
-.row {
-    display: flex;
-    width: 100%;
-}
-
-.form-row label {
-    text-align: left;
-    width: 30%;
-    font-size: 20px;
-    font-weight: 700;
-}
-
-.top-bar {
+/* TOP BAR */
+.defect-entry-popup-grid .top-bar {
     border-bottom: 1px solid grey;
     padding: 0 40px;
 }
 
-.terminal-name {
+.defect-entry-popup-grid .top-bar .terminal-name {
     font-size: 25px;
     font-weight: 700;
     display: flex;
@@ -71,7 +41,7 @@
     border: none;
 }
 
-.common-defect {
+.defect-entry-popup-grid .top-bar .common-defect {
     width: 38%;
     font-size: 20px;
     font-weight: 700;
@@ -81,14 +51,21 @@
     padding: 10px;
 }
 
-.form-container {
+/* FORM CONTAINER */
+.defect-entry-popup-grid .row {
+    display: flex;
+    width: 100%;
+}
+
+.defect-entry-popup-grid .form-container {
     display: flex;
     flex-direction: column;
     width: 100%;
     padding: 0 40px;
 }
 
-.form-container .form-row {
+
+.defect-entry-popup-grid .form-container .form-row {
     padding: 10px;
     display: flex;
     align-items: center;
@@ -96,7 +73,15 @@
     width: 100%;
 }
 
-.form-container .form-row input {
+/* LABELS AND INPUTS */
+.defect-entry-popup-grid .form-container .form-row label {
+    text-align: left;
+    width: 30%;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.defect-entry-popup-grid .form-container .form-row input {
     padding: 10px;
     font-size: 20px;
     border: 1px solid grey;
@@ -104,26 +89,20 @@
     width: 70%;
 }
 
-.form-container .form-row input:focus {
+.defect-entry-popup-grid .form-container .form-row input:focus {
     background-color: #e6faff;
     outline: none;
 }
 
-.form-container .button-grid {
+/* BUTTON GRID */
+.defect-entry-popup-grid .form-container .button-grid {
     padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.keyboard-grid {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.button-grid .save {
+.defect-entry-popup-grid .form-container .button-grid .save {
     background-color: #000000;
     color: white;
     font-size: 20px;
@@ -134,13 +113,13 @@
     width: calc(50% - 2px);
 }
 
-.button-grid .save:hover {
+.defect-entry-popup-grid .form-container .button-grid .save:hover {
     transition: .3s;
     background-color: #fff;
     color: #000000;
 }
 
-.button-grid .cancel {
+.defect-entry-popup-grid .form-container .button-grid .cancel {
     background-color: #e60000;
     color: white;
     font-size: 20px;
@@ -151,9 +130,17 @@
     width: calc(50% - 2px);
 }
 
-.button-grid .cancel:hover {
+.defect-entry-popup-grid .form-container .button-grid .cancel:hover {
     background-color: #fff;
     border: 1px solid red;
     color: red;
     transition: .3s;
+}
+
+/* KEYBOARD GRID */
+.defect-entry-popup-grid .form-container .keyboard-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
