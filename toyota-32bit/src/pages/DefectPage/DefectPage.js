@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import "./defectPage.css";
 import DefectPageHeader from "../../components/defect-page-header/DefectPageHeader";
 import DefectedCar from "../../components/defected-car/DefectedCar";
 import { useNavigate } from "react-router-dom";
 import AssyNo from "../../components/assy-no/AssyNo";
+import DefectEntryPopup from "../../components/defect-entry-popup/DefectEntryPopup";
 
 function DefectPage() {
     let navigate = useNavigate();
+
+    const [showPopup, setShowPopup] = useState(false)
 
     const handleCloseClick = () => {
         navigate("/");
@@ -23,6 +26,10 @@ function DefectPage() {
     const handleBigFontClick = () => {
         navigate("/big-font");
     };
+
+    const handlePopupclick = () => {
+        setShowPopup(true)
+    }
 
     return (
         <div className="defect-page-grid">
@@ -71,7 +78,7 @@ function DefectPage() {
                         <div className="button-container button-container-right">
                             <div className="button">HIZLI KAYDET</div>
                             <div className="button">KAYDET VE GEÇ</div>
-                            <div className="button">HATA KAYIT</div>
+                            <div className="button" onClick={handlePopupclick}>HATA KAYIT</div>
                             <div>
                                 <AssyNo />
                             </div>
@@ -82,8 +89,8 @@ function DefectPage() {
                     </div>
 
                 </div>
-
             </div>
+            {showPopup && <DefectEntryPopup/>}
         </div>
     );
 }

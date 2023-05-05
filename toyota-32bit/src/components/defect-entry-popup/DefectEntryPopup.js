@@ -6,7 +6,7 @@ function DefectEntryPopup() {
     return (
         <div className='defect-entry-popup-grid'>
             <div className='defect-entry-popup-container'>
-                <div className='row'>
+                <div className='row top-bar'>
                     <div className='terminal-name'>CVWQS</div>
                     <div className='common-defect'>SIK GELEN HATA</div>
                 </div>
@@ -42,7 +42,7 @@ function DefectEntryPopup() {
                         </div>
                         <div className='form-row button-grid'>
                             <button className='save'>KAYDET</button>
-                            <button className='close'>İPTAL</button>
+                            <button className='cancel'>İPTAL</button>
                         </div>
                     </div>
                 </div>

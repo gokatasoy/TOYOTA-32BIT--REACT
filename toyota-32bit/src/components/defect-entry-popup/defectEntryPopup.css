@@ -20,7 +20,6 @@
     height: 90%;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-around; */
     align-items: center;
 }
 
@@ -36,12 +35,29 @@
     font-weight: 700;
 }
 
-.terminal-name{
+.top-bar{
     border-bottom: 1px solid grey;
-    width: 100%;
-    text-align: center;
-    padding: 10px;
+    padding: 0 40px;
+}
+
+.terminal-name{
+    font-size: 25px;
+    font-weight: 700;
+    display: flex;
+    text-align: left;
+    align-items: center;
     color: #e60000;
+    border: none;
+}
+
+.common-defect{
+    width:38%;
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    text-align: right;
+    align-items: center;
+    padding: 10px;
 }
 
 .form-container{
@@ -102,7 +118,7 @@
     background-color: #404040;
 }
 
-.button-grid .close{
+.button-grid .cancel{
     background-color: #e60000;
     color: white;
     font-size: 20px;
@@ -113,7 +129,7 @@
     width:calc(50% - 2px);
 }
 
-.button-grid .close:hover{
+.button-grid .cancel:hover{
     background-color: #ff0000;
     transition: .2s;
 }
