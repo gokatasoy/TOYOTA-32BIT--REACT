@@ -15,7 +15,7 @@
     flex-direction: column; */
 }
 
-.allTerminals{
+.main-header-h1{
     display: inline-block;
     width: 100%;
     border: 1px solid grey;
@@ -29,7 +29,7 @@
     text-decoration: underline;
 }
 
-.sectionTitle{
+.section-header-h2{
     width: 190px;
     height: 30px;
     border-right: 1px solid grey;
@@ -40,7 +40,7 @@
     align-items: center;
 }
 
-.filterTitle{
+.filter-header-h2{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,7 +58,7 @@
     border-bottom:none ;
 }
 
-.sectionSide{
+.section-side{
     color: #cc0000;
     font-weight: 700;
     display: flex;
@@ -71,11 +71,11 @@
     border-right: 1px solid grey;
 }
 
-.shopCodeTitle{
+.shop-code-title{
     margin-right: 3px;
 }
 
-.filterSide{
+.filter-side{
     color: black;
     font-weight: 700;
     display: flex;
@@ -92,12 +92,12 @@
     user-select: none;
 }
 
-.filterSide:hover{
+.filter-side:hover{
     background-color: #d9f2de;
     transition: .2s;
 }
 
-.filterSide:active{
+.filter-side:active{
     background-color: #54c46b;
 }
 

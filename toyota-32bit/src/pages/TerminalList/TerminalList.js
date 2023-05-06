@@ -23,22 +23,24 @@ function TerminalList() {
 
     return (
     <div className="terminal-list">
-        <div className='allTerminals'>TÜM TERMİNALLER</div>
-        <div className='container'>
-            <div className='sectionTitle'>BÖLÜM BAZINDA</div>
-            <div className='filterTitle'>FİLTRE BAZINDA</div>
+        <div className='terminal-list-headers'>
+            <div className='main-header-h1'>TÜM TERMİNALLER</div>
+            <div className='container'>
+                <div className='section-header-h2'>BÖLÜM BAZINDA</div>
+                <div className='filter-header-h2'>FİLTRE BAZINDA</div>
+            </div>
         </div>
         
         {veri.map(({ depName,shopCode, filterBaseds }) => (
         <div key={depName}>
             <ul>
                 <div className='container'>
-                    <div className='sectionSide'>
-                        <h2 className='shopCodeTitle' >({shopCode})</h2>  
+                    <div className='section-side'>
+                        <h2 className='shop-code-title' >({shopCode})</h2>  
                         <h2 >{depName}</h2>  
                 </div>
                     {filterBaseds.map(({ filterCode, linkCount }) => (
-                    <li className='filterSide parent-box' key={filterCode} onClick={handleTerminalClick}>
+                    <li className='filter-side parent-box' key={filterCode} onClick={handleTerminalClick}>
                         {filterCode}
                         <div className='child-box'>{linkCount   }</div>
                     </li>
