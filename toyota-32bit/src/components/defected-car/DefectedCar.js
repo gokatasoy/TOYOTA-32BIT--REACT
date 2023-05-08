@@ -16,29 +16,32 @@ function DefectedCar() {
     const [y, setY] = useState(null);
 
     const handlePointerClick = (event) => {
-        // WHEN IT IS FOR THE SECOND TIME PREVIOUSLY CREATED POINTER WILL DISAPPEAR AND THE NEW CLICKED ONE WILL BE SHOWN
-        const existingPointer = document.querySelector(".pointer");
-        if (existingPointer) {
-            existingPointer.remove();
+        if (jsonData === './picture-data2.json') {
+            // WHEN IT IS FOR THE SECOND TIME PREVIOUSLY CREATED POINTER WILL DISAPPEAR AND THE NEW CLICKED ONE WILL BE SHOWN
+            const existingPointer = document.querySelector(".pointer");
+            if (existingPointer) {
+                existingPointer.remove();
+            }
+            //WE HAVE CREATED A DIV USING CREATEELEMENT METHOD AND AFTER THAT WE NAMED IT POINTER. AND WE GAVE IT A CLASSNAME.
+            // IT IS POSITIONED AT THE LOCATION OF THE USER'S CLICK.
+            // AND WITH THE APPENDCHILD METHOD WE HAVE ADDED THE NEW DIV UNDER THE PARENT ELEMENT
+            const pointer = document.createElement("div")
+            pointer.className = "pointer"
+            pointer.style.left = `${event.clientX}px`
+            pointer.style.top = `${event.clientY}px`
+            pointer.style.cursor = `url(${cursor}) 16 16, auto`;
+            document.body.appendChild(pointer)
+    
+            // THIS FUNCTION CALCULATES THE COORDINATESOF THE USER'S CLICK ACCORDING TO TOP-LEFT CORNER
+            const rect = event.target.getBoundingClientRect();
+            const xCoord = event.clientX - rect.left;
+            const yCoord = event.clientY - rect.top;
+    
+            setX(xCoord);
+            setY(yCoord);
         }
-        //WE HAVE CREATED A DIV USING CREATEELEMENT METHOD AND AFTER THAT WE NAMED IT POINTER. AND WE GAVE IT A CLASSNAME.
-        // IT IS POSITIONED AT THE LOCATION OF THE USER'S CLICK.
-        // AND WITH THE APPENDCHILD METHOD WE HAVE ADDED THE NEW DIV UNDER THE PARENT ELEMENT
-        const pointer = document.createElement("div")
-        pointer.className = "pointer"
-        pointer.style.left = `${event.clientX}px`
-        pointer.style.top = `${event.clientY}px`
-        pointer.style.cursor = `url(${cursor}) 16 16, auto`;
-        document.body.appendChild(pointer)
-
-        // THIS FUNCTION CALCULATES THE COORDINATESOF THE USER'S CLICK ACCORDING TO TOP-LEFT CORNER
-        const rect = event.target.getBoundingClientRect();
-        const xCoord = event.clientX - rect.left;
-        const yCoord = event.clientY - rect.top;
-
-        setX(xCoord);
-        setY(yCoord);
-    }
+    };
+    
 
     useEffect(() => {
         axios.get(jsonData)
