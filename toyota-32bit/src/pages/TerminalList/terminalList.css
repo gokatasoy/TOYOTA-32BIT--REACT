@@ -5,21 +5,17 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-.terminal-list{
+.terminal-list-grid{
     margin: 0px;
-    padding: 30px;
+    margin: 20px;
     background-color:#B3E5BE;
-    /* display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column; */
+    border: 1px solid grey;
 }
 
 .main-header-h1{
     display: inline-block;
+    border-bottom: 1px solid grey;
     width: 100%;
-    border: 1px solid grey;
-    border-bottom: none;
     height: 30px;
     color: #cc0000;
     font-weight: 700;
@@ -32,7 +28,7 @@
 .section-header-h2{
     width: 190px;
     height: 30px;
-    border-right: 1px solid grey;
+    /* border-right: 1px solid grey; */
     color: #cc0000;
     font-weight: 700;
     display: flex;
@@ -50,12 +46,11 @@
     width: 88%;
 }
 
-.terminal-list .container{
+.terminal-list-grid .container{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    border: 1px solid grey;
-    border-bottom:none ;
+    border-bottom: 1px solid grey;
 }
 
 .section-side{
@@ -103,13 +98,13 @@
 
 .child-box {
     position: absolute;
-    top: 0px; /* adjust the distance from the top of the parent box */
-    right: 0px; /* adjust the distance from the right of the parent box */
-    width: 12px; /* set the width of the child box */
-    height: 12px; /* set the height of the child box */
+    top: 0px; 
+    right: 0px; 
+    width: 12px;
+    height: 12px; 
     border-radius: 3px;
     text-align: center;
     color: white;
-    background-color: #cc0000; /* set the background color of the child box */
+    background-color: #cc0000; 
     font-size: 10px;
 }
