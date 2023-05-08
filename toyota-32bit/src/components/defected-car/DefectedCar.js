@@ -16,6 +16,11 @@ function DefectedCar() {
     const [y, setY] = useState(null);
 
     const handlePointerClick = (event) => {
+        // WHEN IT IS FOR THE SECOND TIME PREVIOUSLY CREATED POINTER WILL DISAPPEAR AND THE NEW CLICKED ONE WILL BE SHOWN
+        const existingPointer = document.querySelector(".pointer");
+        if (existingPointer) {
+            existingPointer.remove();
+        }
         //WE HAVE CREATED A DIV USING CREATEELEMENT METHOD AND AFTER THAT WE NAMED IT POINTER. AND WE GAVE IT A CLASSNAME.
         // IT IS POSITIONED AT THE LOCATION OF THE USER'S CLICK.
         // AND WITH THE APPENDCHILD METHOD WE HAVE ADDED THE NEW DIV UNDER THE PARENT ELEMENT
@@ -40,6 +45,8 @@ function DefectedCar() {
             .then(res => setBoxesData(res.data))
             .catch(error => console.error(error));
     }, [jsonData]);
+
+
 
     const handleBoxClick = (picAddress) => {
         if (jsonData === "./picture-data.json") {
