@@ -1,0 +1,9 @@
+.pointer {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-image: url("../../cursor5.png");
+    background-size: contain;
+    pointer-events: none;
+    z-index: 999;
+}
