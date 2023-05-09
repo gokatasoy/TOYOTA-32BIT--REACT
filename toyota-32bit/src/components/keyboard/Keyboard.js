@@ -1,100 +1,109 @@
-import React from 'react'
-import {useState } from 'react';
+import React, { useState } from "react";
 import "./keyboard.css"
 
-function Keyboard() {
-    const [text, setText] = useState("");
+function VirtualKeyboard(props) {
+    const [shift, setShift] = useState(false);
 
-    function TextArea({text}) {
-        return (
-        <div className='text-wrapper'>
-            <div className='text'>
-                <h3>{text}</h3>
-            </div>
-        </div>
-        )
-}
+    const keys = [
+        [
+            { label: "-", value: "hyphen" },
+            { label: "1", value: "1" },
+            { label: "2", value: "2" },
+            { label: "3", value: "3" },
+            { label: "4", value: "4" },
+            { label: "5", value: "5" },
+            { label: "6", value: "6" },
+            { label: "7", value: "7" },
+            { label: "8", value: "8" },
+            { label: "9", value: "9" },
+            { label: "0", value: "0" },
+            { label: "Delete", value: "delete" },
+        ],
+        [
+            { label: "Tab", value: "tab" },
+            { label: "q", value: "q" },
+            { label: "w", value: "w" },
+            { label: "e", value: "e" },
+            { label: "r", value: "r" },
+            { label: "t", value: "t" },
+            { label: "y", value: "y" },
+            { label: "u", value: "u" },
+            { label: "i", value: "i" },
+            { label: "o", value: "o" },
+            { label: "p", value: "p" },
+            { label: "ğ", value: "ğ" },
+            { label: "ü", value: "ü" },
+        ],
+        [
+            {
+                label: "Shift",
+                value: "shift",
+                className: `shift-key ${shift ? "active" : ""}`,
+            },
+            { label: "a", value: "a" },
+            { label: "s", value: "s" },
+            { label: "d", value: "d" },
+            { label: "f", value: "f" },
+            { label: "g", value: "g" },
+            { label: "h", value: "h" },
+            { label: "j", value: "j" },
+            { label: "k", value: "k" },
+            { label: "l", value: "l" },
+            { label: "ş", value: "ş" },
+            { label: "i", value: "i" },
+        ],
+        [
+            { label: "&lt;", value: "less-than" },
+            { label: "&gt;", value: "greater-than" },
+            { label: "z", value: "z" },
+            { label: "x", value: "x" },
+            { label: "c", value: "c" },
+            { label: "v", value: "v" },
+            { label: "b", value: "b" },
+            { label: "n", value: "n" },
+            { label: "m", value: "m" },
+            { label: "ö", value: "ö" },
+            { label: "ç", value: "ç" },
+            { label: ".", value: "." },
+            { label: ",", value: "," },
+        ],
+        [
+            {
+                label: "Space",
+                value: " ",
+                className: "space-key",
+            },
+        ],
+    ];
 
-    const addToText = (val)=>{
-        setText((text) => [...text, val + ""])
-    }
-    
-    const toSpace = () => {
-        setText((text) => [...text, " "])
-    }
-    
-    const toDelete = (val) => {
-        setText(text.slice(0, -1))
-    }
-    
+    const handleKeyPress = (key) => {
+        if (key === "shift") {
+            setShift(!shift);
+        } else {
+            props.onKeyPressed(shift ? key.toUpperCase() : key);
+        }
+    };
+
     return (
-        <div className='keyboard-container'>
-            <TextArea text={text}/>
-            <div className='keyboard-grid'>
-                <div className='row'>
-                    <button className="keys" key="_" onClick={addToText} >_</button> 
-                    <button className="keys" key="1" onClick={addToText} >1</button> 
-                    <button className="keys" key="2" onClick={addToText} >2</button>
-                    <button className="keys" key="3" onClick={addToText} >3</button>
-                    <button className="keys" key="4" onClick={addToText} >4</button>
-                    <button className="keys" key="5" onClick={addToText} >5</button>
-                    <button className="keys" key="6" onClick={addToText} >6</button>
-                    <button className="keys" key="7" onClick={addToText} >7</button>
-                    <button className="keys" key="8" onClick={addToText} >8</button>
-                    <button className="keys" key="9" onClick={addToText} >9</button>
-                    <button className="keys" key="0" onClick={addToText} >0</button>               
-                    <button className="keys delete" onClick={toDelete}>Delete</button>
-                </div>
-                <div className='row'>
-                    <button className="keys tab" onClick={addToText}>Tab</button>
-                    <button className="keys" key="Q" onClick={addToText}>Q</button>
-                    <button className="keys" key="W" onClick={addToText}>W</button>
-                    <button className="keys" key="E" onClick={addToText}>E</button>
-                    <button className="keys" key="R" onClick={addToText}>R</button>
-                    <button className="keys" key="T" onClick={addToText}>T</button>
-                    <button className="keys" key="Y" onClick={addToText}>Y</button>
-                    <button className="keys" key="U" onClick={addToText}>U</button>
-                    <button className="keys" key="I" onClick={addToText}>I</button>
-                    <button className="keys" key="O" onClick={addToText}>O</button>
-                    <button className="keys" key="P" onClick={addToText}>P</button>
-                    <button className="keys" key="Ğ" onClick={addToText}>Ğ</button>
-                    <button className="keys" key="Ü" onClick={addToText}>Ü</button>
-                </div>
-                <div className='row'>
-                    <button className="keys capslock">CapsLock</button>
-                    <button className="keys" key="A" onClick={addToText}>A</button>
-                    <button className="keys" key="S" onClick={addToText}>S</button>
-                    <button className="keys" key="D" onClick={addToText}>D</button>
-                    <button className="keys" key="F" onClick={addToText}>F</button>
-                    <button className="keys" key="G" onClick={addToText}>G</button>
-                    <button className="keys" key="H" onClick={addToText}>H</button>
-                    <button className="keys" key="J" onClick={addToText}>J</button>
-                    <button className="keys" key="K" onClick={addToText}>K</button>
-                    <button className="keys" key="L" onClick={addToText}>L</button>
-                    <button className="keys" key="Ş" onClick={addToText}>Ş</button>
-                    <button className="keys" key="İ" onClick={addToText}>İ</button>
-                </div>
-                <div className='row'>
-                    <button className="keys smaller" key="&lt;" onClick={addToText}>&lt;</button>
-                    <button className="keys bigger" key="&gt;" onClick={addToText}>&gt;</button>
-                    <button className="keys" key="Z" onClick={addToText}>Z</button>
-                    <button className="keys" key="X" onClick={addToText}>X</button>
-                    <button className="keys" key="C" onClick={addToText}>C</button>
-                    <button className="keys" key="V" onClick={addToText}>V</button>
-                    <button className="keys" key="B" onClick={addToText}>B</button>
-                    <button className="keys" key="N" onClick={addToText}>N</button>
-                    <button className="keys" key="M" onClick={addToText}>M</button>
-                    <button className="keys" key="Ö" onClick={addToText}>Ö</button>
-                    <button className="keys" key="Ç" onClick={addToText}>Ç</button>
-                    <button className="keys" key="." onClick={addToText}>.</button>
-                    <button className="keys" key="," onClick={addToText}>,</button>
-                </div>
-                <div className='row'>
-                    <button className="keys space" onClick={toSpace}>Space</button>
-                </div>
+        <div className="keyboard-container">
+            <div className="keyboard-grid">
+                {keys.map((row, index) => (
+                    <div key={index} >
+                        {row.map(({ label, value, className }) => (
+                            <button
+                                key={label}
+                                onClick={() => handleKeyPress(value)}
+                                className={className}
+                            >
+                                {shift ? label.toUpperCase() : label}
+                            </button>
+                        ))}
+                    </div>
+                ))}
             </div>
         </div>
-    )
+    );
 }
 
-export default Keyboard
+export default VirtualKeyboard;
+

@@ -9,23 +9,28 @@ import { useNavigate } from 'react-router-dom'
 
 function TerminalLogin() {
     const [veri, setVeri] = useState([])
-    
+    const [inputValue, setInputValue] = useState("");
+
+    const handleKeyPressed = (key) => {
+        setInputValue(inputValue + key);
+    };
+
     let navigate = useNavigate();
 
     useEffect(() => {
         axios.get("./first-login.json")
             .then(res => setVeri(res.data))
             .catch(error => {
-            console.log(error);
-            setVeri("An error occurred while fetching data");
+                console.log(error);
+                setVeri("An error occurred while fetching data");
             });
-        }, []);
+    }, []);
 
     // LOGIN & CLOSE BUTTONS
     const handleLoginClick = () => {
         navigate("/defect-page")
     };
-    
+
     const handleCloseClick = () => {
         navigate("/");
     };
@@ -40,14 +45,14 @@ function TerminalLogin() {
                     <div className='form-container'>
                         <div className='form-row terminal-list'>
                             <label>Terminal Listesi:</label>
-                                <select className='select-terminal-list'>
-                                    {veri.map(({termName}) => (
+                            <select className='select-terminal-list'>
+                                {veri.map(({ termName }) => (
                                     <option key={veri.termId}>{termName}</option>))}
-                                </select>
-                        </div>           
+                            </select>
+                        </div>
                         <div className='form-row'>
                             <label>Sicil No:</label>
-                            <input type="text" placeholder='sicil no' />
+                            <input type="text" placeholder='sicil no' value={inputValue} />
                         </div>
                         <div className='form-row'>
                             <label>Şifre:</label>
@@ -58,25 +63,25 @@ function TerminalLogin() {
                             <input type="text" placeholder='montaj no' />
                         </div>
                         <div className='form-row-date-shift'>
-                            <DateShift/>
+                            <DateShift />
                         </div>
 
                         <div className='form-row button-grid'>
                             <Button
-                            className="giris"
-                            onClick={handleLoginClick}
-                            text={"Giriş Yap"}
+                                className="giris"
+                                onClick={handleLoginClick}
+                                text={"Giriş Yap"}
                             />
                             <Button
-                            className="kapat"
-                            onClick={handleCloseClick}
-                            text={"Kapat"}
+                                className="kapat"
+                                onClick={handleCloseClick}
+                                text={"Kapat"}
                             />
                         </div>
                     </div>
                 </div>
                 <div className='keyboard-grid'>
-                    <Keyboard/>
+                    <Keyboard onKeyPressed={handleKeyPressed} />
                 </div>
             </div>
         </div>
