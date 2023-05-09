@@ -10,35 +10,24 @@
     user-select: none;
 }
 
-.keyboard-grid .row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-}
-
 .keyboard-grid .keys {
     font-size: 1.2rem;
-    width: 3.35rem;
-    padding: .7rem 1rem;
+    width: 3rem;
+    padding: .5rem .6rem;
     margin: .09rem;
     border: 1px solid #2F58CD;
     border-radius: .6rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
 }
 
-.keyboard-grid .delete{
-    width: 6.7rem ;
+.keyboard-grid .delete-key{
+    width: 6rem ;
 }
 
-.keyboard-grid .capslock{
-    width: 6.7rem ;
+.keyboard-grid .shift-key{
+    width: 6rem ;
 }
 
-.keyboard-grid .space {
+.keyboard-grid .space-key {
     width: 100%;
 }
 
@@ -49,48 +38,3 @@
 .keyboard-grid .keys:active {
     background-color: #b3e7ff;
 }
-
-/* @media screen and (min-device-width:1620px) and (max-device-width:1884px) {
-    .keyboard-grid .keys{
-        font-size: 1rem;
-        width: 2.5rem;
-    }
-
-    .keyboard-grid .delete {
-        font-size: 1rem ;
-        width: 5rem ;
-    }
-
-    .keyboard-grid .capslock {
-        font-size: 1rem ;
-        width: 5rem ;
-    }
-
-    .keyboard-grid .space{
-        width: 100%;
-    }
-}
-
-@media screen and (min-device-width:1350px) and (max-device-width:1619px) {
-    .keyboard-grid .keys{
-        font-size: .8rem;
-        width: 2rem;
-    }
-
-    .keyboard-grid .delete {
-        font-size: .8rem ;
-        width: 4rem ;
-    }
-
-    .keyboard-grid .capslock {
-        font-size: .8rem ;
-        width: 4rem ;
-    }
-
-    .keyboard-grid .space{
-        width: 100%;
-    }
-}
-
-@media screen and (min-device-width:1000px) and (max-device-width:1349px) {
-} */

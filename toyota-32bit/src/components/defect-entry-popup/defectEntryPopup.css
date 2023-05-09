@@ -21,8 +21,8 @@
     background-color: #B3E5BE;
     padding: 20px;
     border-radius: 7px;
-    width: 60%;
-    max-width: 750px;
+    width: 90%;
+    max-width: 850px;
 }
 
 /* TOP BAR */
@@ -138,10 +138,9 @@
 }
 
 /* KEYBOARD GRID */
-.defect-entry-popup-grid .form-container .keyboard-grid {
+.defect-entry-popup-grid .keyboard-component-grid {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 100%;
 }

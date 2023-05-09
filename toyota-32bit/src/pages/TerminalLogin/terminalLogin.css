@@ -104,7 +104,8 @@
     justify-content: center;
 }
 
-.login-page-grid .keyboard-grid {
+/* KEYBOARD GRID */
+.login-page-grid .keyboard-component-grid {
     display: flex;
     justify-content: center;
     align-items: center;

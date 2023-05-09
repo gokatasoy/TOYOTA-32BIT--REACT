@@ -80,7 +80,7 @@ function TerminalLogin() {
                         </div>
                     </div>
                 </div>
-                <div className='keyboard-grid'>
+                <div className='keyboard-component-grid'>
                     <Keyboard onKeyPressed={handleKeyPressed} />
                 </div>
             </div>

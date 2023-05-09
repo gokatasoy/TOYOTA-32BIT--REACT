@@ -1,8 +1,14 @@
 import React from 'react'
 import "./defectEntryPopup.css"
 import Keyboard from '../keyboard/Keyboard'
+import { useState } from 'react';
 
 function DefectEntryPopup({ onClose }) {
+    const [inputValue, setInputValue] = useState("");
+
+    const handleKeyPressed = (key) => {
+        setInputValue(inputValue + key);
+    };
 
     const handlePopupClose = () => {
         onClose();
@@ -22,7 +28,7 @@ function DefectEntryPopup({ onClose }) {
                         </div>
                         <div className='form-row'>
                             <label>Hata Sınıfı</label>
-                            <input type='text' />
+                            <input type='text' value={inputValue} />
                         </div>
                         <div className='form-row'>
                             <label>Exit Department</label>
@@ -50,8 +56,8 @@ function DefectEntryPopup({ onClose }) {
                         </div>
                     </div>
                 </div>
-                <div className='keyboard-grid'>
-                    <Keyboard />
+                <div className='keyboard-component-grid'>
+                    <Keyboard onKeyPressed={handleKeyPressed}/>
                 </div>
             </div>
         </div>
