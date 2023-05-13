@@ -53,8 +53,8 @@ function Keyboard(props) {
             { className:"keys", label: "i", value: "i" },
         ],
         [
-            { className:"keys", label: "<", value: "less-than" },
-            { className:"keys", label: ">", value: "greater-than" },
+            { className:"keys", label: ".", value: "." },
+            { className:"keys", label: ",", value: "," },
             { className:"keys", label: "z", value: "z" },
             { className:"keys", label: "x", value: "x" },
             { className:"keys", label: "c", value: "c" },
@@ -64,8 +64,8 @@ function Keyboard(props) {
             { className:"keys", label: "m", value: "m" },
             { className:"keys", label: "ö", value: "ö" },
             { className:"keys", label: "ç", value: "ç" },
-            { className:"keys", label: ".", value: "." },
-            { className:"keys", label: ",", value: "," },
+            { className:"keys enter-key", label: "Enter", value: "enter" },
+            
         ],
         [
             {

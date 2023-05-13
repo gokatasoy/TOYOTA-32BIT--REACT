@@ -27,6 +27,10 @@
     width: 6rem ;
 }
 
+.keyboard-grid .enter-key{
+    width: 6rem ;
+}
+
 .keyboard-grid .space-key {
     width: 100%;
 }
