@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./keyboard.css"
 
-function VirtualKeyboard(props) {
+function Keyboard(props) {
     const [shift, setShift] = useState(false);
 
     const keys = [
@@ -79,10 +79,13 @@ function VirtualKeyboard(props) {
     const handleKeyPress = (key) => {
         if (key === "shift") {
             setShift(!shift);
+        } else if (key === "delete") {
+            props.onKeyPressed("delete");
         } else {
             props.onKeyPressed(shift ? key.toUpperCase() : key);
         }
     };
+    
 
     return (
         <div className="keyboard-container">
@@ -105,5 +108,5 @@ function VirtualKeyboard(props) {
     );
 }
 
-export default VirtualKeyboard;
+export default Keyboard;
 

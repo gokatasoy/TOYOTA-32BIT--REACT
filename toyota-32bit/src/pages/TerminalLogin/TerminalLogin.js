@@ -12,7 +12,11 @@ function TerminalLogin() {
     const [inputValue, setInputValue] = useState("");
 
     const handleKeyPressed = (key) => {
-        setInputValue(inputValue + key);
+        if (key === 'delete') {
+            setInputValue((prevValue) => prevValue.slice(0, -1));
+        } else {
+            setInputValue((prevValue) => prevValue + key);
+        }
     };
 
     let navigate = useNavigate();
