@@ -9,18 +9,39 @@ import { useNavigate } from 'react-router-dom'
 
 function TerminalLogin() {
     const [veri, setVeri] = useState([])
-    const [inputValue, setInputValue] = useState("");
+    const [inputValues, setInputValues] = useState({
+        sicilNo: "",
+        password: "",
+        montajNo: ""
+    });
+    const [isInputFocused, setIsInputFocused] = useState(false);
+    const [focusedInput, setFocusedInput] = useState("");
 
+    // KEYBOARD FUNCTION
     const handleKeyPressed = (key) => {
-        if (key === 'delete') {
-            setInputValue((prevValue) => prevValue.slice(0, -1));
-        } else {
-            setInputValue((prevValue) => prevValue + key);
+        if (isInputFocused && focusedInput !== "") {
+            if (key === 'delete') {
+                setInputValues(prevValues => ({
+                    ...prevValues,
+                    [focusedInput]: prevValues[focusedInput].slice(0, -1)
+                }));
+            } else {
+                setInputValues(prevValues => ({
+                    ...prevValues,
+                    [focusedInput]: prevValues[focusedInput] + key
+                }));
+            }
         }
+    };
+
+    const handleInputFocused = (inputName) => {
+        setIsInputFocused(true);
+        setFocusedInput(inputName);
     };
 
     let navigate = useNavigate();
 
+    // FETCHING DATA
     useEffect(() => {
         axios.get("./first-login.json")
             .then(res => setVeri(res.data))
@@ -30,7 +51,7 @@ function TerminalLogin() {
             });
     }, []);
 
-    // LOGIN & CLOSE BUTTONS
+    // LOGIN & CLOSE BUTTONS'S NAVIGATION
     const handleLoginClick = () => {
         navigate("/defect-page")
     };
@@ -56,25 +77,29 @@ function TerminalLogin() {
                         </div>
                         <div className='form-row'>
                             <label>Sicil No:</label>
-                            <input 
-                            type="text" 
-                            placeholder='sicil no' 
-                            value={inputValue} />
+                            <input
+                                type="text"
+                                placeholder='sicil no'
+                                value={inputValues.sicilNo}
+                                onFocus={() => handleInputFocused("sicilNo")}
+                            />
                         </div>
                         <div className='form-row'>
                             <label>Şifre:</label>
-                            <input 
-                            type="password" 
-                            placeholder='şifre' 
-                            value={inputValue}
+                            <input
+                                type="password"
+                                placeholder='şifre'
+                                value={inputValues.password}
+                                onFocus={() => handleInputFocused("password")}
                             />
                         </div>
                         <div className='form-row'>
                             <label>Montaj No:</label>
-                            <input 
-                            type="text" 
-                            placeholder='montaj no' 
-                            value={inputValue}
+                            <input
+                                type="text"
+                                placeholder='montaj no'
+                                value={inputValues.montajNo}
+                                onFocus={() => handleInputFocused("montajNo")}
                             />
                         </div>
                         <div className='form-row-date-shift'>
