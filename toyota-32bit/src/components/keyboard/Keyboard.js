@@ -6,7 +6,7 @@ function Keyboard(props) {
 
     const keys = [
         [
-            { className:"keys", label: "-", value: "hyphen" },
+            { className:"keys", label: "-", value: "-" },
             { className:"keys", label: "1", value: "1" },
             { className:"keys", label: "2", value: "2" },
             { className:"keys", label: "3", value: "3" },
@@ -20,7 +20,7 @@ function Keyboard(props) {
             { className:"keys delete-key", label: "Delete", value: "delete" },
         ],
         [
-            { className:"keys", label: "Tab", value: "tab" },
+            { className:"keys", label: "@", value: "@" },
             { className:"keys", label: "q", value: "q" },
             { className:"keys", label: "w", value: "w" },
             { className:"keys", label: "e", value: "e" },

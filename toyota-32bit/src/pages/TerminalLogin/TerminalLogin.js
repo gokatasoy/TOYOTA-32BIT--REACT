@@ -56,15 +56,26 @@ function TerminalLogin() {
                         </div>
                         <div className='form-row'>
                             <label>Sicil No:</label>
-                            <input type="text" placeholder='sicil no' value={inputValue} />
+                            <input 
+                            type="text" 
+                            placeholder='sicil no' 
+                            value={inputValue} />
                         </div>
                         <div className='form-row'>
                             <label>Şifre:</label>
-                            <input type="password" placeholder='şifre' />
+                            <input 
+                            type="password" 
+                            placeholder='şifre' 
+                            value={inputValue}
+                            />
                         </div>
                         <div className='form-row'>
                             <label>Montaj No:</label>
-                            <input type="text" placeholder='montaj no' />
+                            <input 
+                            type="text" 
+                            placeholder='montaj no' 
+                            value={inputValue}
+                            />
                         </div>
                         <div className='form-row-date-shift'>
                             <DateShift />
