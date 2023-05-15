@@ -13,7 +13,7 @@
 }
 
 .login-page-container {
-    background-color: #B3E5BE;
+    /* background-color: #B3E5BE; */
     padding: 20px;
     border: 1px solid grey;
     border-radius: 7px;
@@ -37,7 +37,6 @@
 }
 
 /* FORM CONTAINER */
-
 .login-page-grid .row {
     display: flex;
     width: 100%;
@@ -55,10 +54,10 @@
     display: flex;
     align-items: center;
     /* justify-content: center; */
-    width: 100%;
+    /* width: 100%; */
 }
 
-.login-page-grid .form-container .form-row-date-shift{
+.login-page-grid .form-container .form-row-date-shift {
     padding: 15px 0;
 }
 
@@ -70,7 +69,15 @@
     font-weight: 700;
 }
 
-.login-page-grid .form-container .form-row input {
+/* input */
+.login-page-grid .form-container .form-row .input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 1700px;
+}
+
+.login-page-grid .form-container .form-row .correct-input {
     padding: 10px;
     font-size: 20px;
     border: 1px solid grey;
@@ -78,12 +85,14 @@
     width: 70%;
 }
 
-.login-page-grid .form-container .form-row input:focus {
+.login-page-grid .form-container .form-row .correct-input:focus {
     background-color: #e6faff;
     outline: none;
+    border-color: #007bff;
 }
 
-.login-page-grid .form-container .form-row select{
+/* selectbox */
+.login-page-grid .form-container .form-row .select-terminal-list {
     padding: 10px;
     font-size: 20px;
     border: 1px solid grey;
@@ -91,9 +100,10 @@
     width: 70%;
 }
 
-.login-page-grid .form-container .form-row select:focus{
+.login-page-grid .form-container .form-row .select-terminal-list:focus {
     background-color: #e6faff;
     outline: none;
+    border-color: #007bff;
 }
 
 /* BUTTON GRID */
@@ -112,6 +122,34 @@
     flex-direction: column;
 }
 
+/* FORMIK AND YUP */
+.login-page-grid .form-container .form-row .error-input {
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid red;
+    border-radius: 6px;
+    width: 70%;
+}
+
+.login-page-grid .form-container .form-row .error-input:focus {
+    background-color: #ffe6e6;
+    outline: none;
+    border-color: red;
+}
+
+.login-page-grid .form-container .form-row .error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+/* .login-page-grid .form-container .form-row .error-message {
+    display: block;
+    margin-top: 4px;
+    font-size: 12px;
+} */
+
+/* MEDIDA QUEREIS */
 @media screen and (min-device-width:768px) and (max-device-width:2143px) {
     .login-page-container {
         width: 100%;
