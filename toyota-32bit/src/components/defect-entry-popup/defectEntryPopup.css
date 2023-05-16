@@ -69,19 +69,27 @@
     padding: 10px;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    width: 100%;
+    /* justify-content: flex-end; */
+    /* width: 100%; */
 }
 
 /* LABELS AND INPUTS */
 .defect-entry-popup-grid .form-container .form-row label {
     text-align: left;
-    width: 30%;
+    width: 80%;
     font-size: 20px;
     font-weight: 700;
 }
 
-.defect-entry-popup-grid .form-container .form-row input {
+/* input */
+.defect-entry-popup-grid .form-container .form-row .input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 1700px;
+}
+
+.defect-entry-popup-grid .form-container .form-row .correct-input {
     padding: 10px;
     font-size: 20px;
     border: 1px solid grey;
@@ -89,9 +97,10 @@
     width: 70%;
 }
 
-.defect-entry-popup-grid .form-container .form-row input:focus {
+.defect-entry-popup-grid .form-container .form-row .correct-input:focus {
     background-color: #e6faff;
     outline: none;
+    border-color: #007bff;
 }
 
 /* BUTTON GRID */
@@ -143,4 +152,25 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+/* FORMIK AND YUP */
+.defect-entry-popup-grid .form-row .error-input {
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid red;
+    border-radius: 6px;
+    width: 70%;
+}
+
+.defect-entry-popup-grid .form-row .error-input:focus {
+    background-color: #ffe6e6;
+    outline: none;
+    border-color: red;
+}
+
+.defect-entry-popup-grid .form-row .error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
 }

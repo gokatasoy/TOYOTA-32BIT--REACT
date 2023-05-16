@@ -12,23 +12,23 @@
 
 .keyboard-grid .keys {
     font-size: 1.2rem;
-    width: 3rem;
+    width: 3.5rem;
     padding: .5rem .6rem;
-    margin: .09rem;
+    margin: .05rem;
     border: 1px solid #2F58CD;
     border-radius: .6rem;
 }
 
 .keyboard-grid .delete-key{
-    width: 6rem ;
+    width: 7rem ;
 }
 
 .keyboard-grid .shift-key{
-    width: 6rem ;
+    width: 7rem ;
 }
 
 .keyboard-grid .enter-key{
-    width: 6rem ;
+    width: 7rem ;
 }
 
 .keyboard-grid .space-key {
