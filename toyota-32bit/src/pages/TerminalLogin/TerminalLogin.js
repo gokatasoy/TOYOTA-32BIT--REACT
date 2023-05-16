@@ -95,6 +95,15 @@ function TerminalLogin() {
         onSubmit: handleLoginClick
     })
 
+    useEffect(() => {
+        formik.setValues({
+            sicilNo: inputValues.sicilNo,
+            password: inputValues.password,
+            montajNo: inputValues.montajNo
+        });
+    }, [inputValues, formik.setValues]);
+
+
     return (
         <div className='login-page-grid'>
             <div className='login-page-container'>
@@ -128,6 +137,7 @@ function TerminalLogin() {
                                     placeholder='sicil no'
                                     name="sicilNo"
                                     onChange={formik.handleChange}
+                                    onFocus={() => handleInputFocused("sicilNo")}
                                     // onBlur={formik.handleBlur}
                                     value={formik.values.sicilNo}
                                     className={formik.touched.sicilNo && formik.errors.sicilNo ? 'error-input' : 'correct-input'}
@@ -146,6 +156,7 @@ function TerminalLogin() {
                                     placeholder='şifre'
                                     name="password"
                                     onChange={formik.handleChange}
+                                    onFocus={() => handleInputFocused("password")}
                                     // onBlur={formik.handleBlur}
                                     value={formik.values.password}
                                     className={formik.touched.password && formik.errors.password ? 'error-input' : 'correct-input'}
@@ -164,6 +175,7 @@ function TerminalLogin() {
                                     placeholder='montaj no'
                                     name="montajNo"
                                     onChange={formik.handleChange}
+                                    onFocus={() => handleInputFocused("montajNo")}
                                     // onBlur={formik.handleBlur}
                                     value={formik.values.montajNo}
                                     className={formik.touched.montajNo && formik.errors.montajNo ? 'error-input' : 'correct-input'}
