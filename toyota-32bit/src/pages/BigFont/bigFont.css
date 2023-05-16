@@ -1,39 +1,47 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.BigFont-grid{
+.BigFont-grid {
     padding: 30px;
 }
 
-.defect-page-header{
+.BigFont-grid.active {
+    background-color: #B3E5BE;
+}
+
+.BigFont-grid.inactive {
+    background-color: red;
+}
+
+.defect-page-header {
     background-color: #999999;
     border-radius: 10px;
     padding: 10px;
 }
 
-.BigFont-grid-container{
+.BigFont-grid-container {
     height: 100vh;
     width: 100%;
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #B3E5BE;
+    /* background-color: #B3E5BE; */
 }
 
-.BigFont-row{
+.BigFont-row {
     display: flex;
     width: 100%;
 }
 
-.defect{
+.defect {
     flex-direction: column;
 }
 
-.vehicle-data{
+.vehicle-data {
     /* background-color: red; */
     width: 85%;
     height: 55vh;
@@ -45,12 +53,12 @@
     justify-content: center;
 }
 
-.defect-entry-container{
+.defect-entry-container {
     /* background-color: yellow; */
     width: 15%;
 }
 
-.defect-data{
+.defect-data {
     /* background-color: green; */
     width: 100%;
     display: flex;
