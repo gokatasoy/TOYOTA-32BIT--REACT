@@ -5,8 +5,13 @@ import DefectedCar from "../../components/defected-car/DefectedCar";
 import { useNavigate } from "react-router-dom";
 import AssyNo from "../../components/assy-no/AssyNo";
 import DefectEntryPopup from "../../components/defect-entry-popup/DefectEntryPopup";
+import AfkAlert from "../../components/afk-alert/AfkAlert";
 
 function DefectPage() {
+
+    // AFK ALERT
+    const [isUserActive, setIsUserActive] = useState(true);
+
     let navigate = useNavigate();
 
     const [showPopup, setShowPopup] = useState(false)
@@ -37,7 +42,7 @@ function DefectPage() {
 
 
     return (
-        <div className="defect-page-grid">
+        <div className={`defect-page-grid ${isUserActive ? 'active' : 'inactive'}`}>
             <div className="defect-page-container">
                 <div className="header-container">
                     <DefectPageHeader />
@@ -95,7 +100,8 @@ function DefectPage() {
 
                 </div>
             </div>
-            {showPopup && <DefectEntryPopup onClose={handlePopupClose}/>}
+            {showPopup && <DefectEntryPopup onClose={handlePopupClose} />}
+            <AfkAlert isUserActive={isUserActive} setIsUserActive={setIsUserActive} />
         </div>
     );
 }

@@ -4,8 +4,12 @@ import DefectPageHeader from '../../components/defect-page-header/DefectPageHead
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import DefectEntryContainer from '../../components/defect-entry-container/DefectEntryContainer'
+import AfkAlert from '../../components/afk-alert/AfkAlert'
 
 const BigFont = () => {
+
+    // AFK ALERT
+    const [isUserActive, setIsUserActive] = useState(true);
 
     // FETCH DATA
     const [vehicleData, setVehicleData] = useState([]);
@@ -26,35 +30,6 @@ const BigFont = () => {
                 setVehicleData("An error occured while fetching data.")
             });
     }, [])
-
-    // AFK ALERT
-    const [isUserActive, setIsUserActive] = useState(false)
-
-    useEffect(() => {
-        let activityTimer;
-
-        const resetTimer = () => {
-            clearTimeout(activityTimer);
-            activityTimer = setTimeout(() => {
-                setIsUserActive(false);
-            }, 3000);
-        };
-
-        const handleUserActivity = () => {
-            setIsUserActive(true);
-            resetTimer();
-        };
-
-        window.addEventListener('mousemove', handleUserActivity);
-        window.addEventListener('keydown', handleUserActivity);
-
-        return () => {
-            window.removeEventListener('mousemove', handleUserActivity);
-            window.removeEventListener('keydown', handleUserActivity);
-            clearTimeout(activityTimer);
-        };
-    }, []);
-
 
     return (
         <div className={`BigFont-grid ${isUserActive ? 'active' : 'inactive'}`}>
@@ -83,8 +58,8 @@ const BigFont = () => {
                         </div>
                     ))}
                 </div>
-
             </div>
+            <AfkAlert isUserActive={isUserActive} setIsUserActive={setIsUserActive} />
         </div>
     )
 }
