@@ -11,6 +11,7 @@ function DefectedCar() {
     const [boxesData, setBoxesData] = useState([]);
     const [carImage, setCarImage] = useState(dummyCar);
     const [showDefectionSelectBox, setShowDefectionSelectBox] = useState(false);
+    const [pointerCoords, setPointerCoords] = useState(null)
 
     const [x, setX] = useState(null);
     const [y, setY] = useState(null);
@@ -31,17 +32,19 @@ function DefectedCar() {
             pointer.style.top = `${event.clientY}px`
             pointer.style.cursor = `url(${cursor}) 16 16, auto`;
             document.body.appendChild(pointer)
-    
+
             // THIS FUNCTION CALCULATES THE COORDINATESOF THE USER'S CLICK ACCORDING TO TOP-LEFT CORNER
             const rect = event.target.getBoundingClientRect();
             const xCoord = event.clientX - rect.left;
             const yCoord = event.clientY - rect.top;
-    
+
             setX(xCoord);
             setY(yCoord);
+
+            setPointerCoords({ x: xCoord, y: yCoord })
         }
     };
-    
+
 
     useEffect(() => {
         axios.get(jsonData)
@@ -62,7 +65,7 @@ function DefectedCar() {
 
     return (
         <div className='defected-car-grid'>
-            <div className="image-container">
+            <div className="image-container" style={{position:"relative"}} >
                 <img src={carImage} alt="dummy-car" onClick={handlePointerClick} />
                 {x !== null && y !== null && (
                     <div>
@@ -79,6 +82,7 @@ function DefectedCar() {
                                         key={boxData.buttonId}
                                         boxData={boxData}
                                         handleBoxClick={handleBoxClick}
+                                        pointerCoords={pointerCoords}
                                     />
                                 </div>
                             ))}
