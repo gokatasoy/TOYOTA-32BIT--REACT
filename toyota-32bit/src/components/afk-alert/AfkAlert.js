@@ -8,7 +8,7 @@ const AfkAlert = ({ isUserActive, setIsUserActive }) => {
         let activityTimer = setTimeout(() => {
             setIsUserActive(false);
             playAlertSound();
-        }, 300000);
+        }, 500000);
 
         const handleUserActivity = () => {
             setIsUserActive(true);
@@ -17,7 +17,7 @@ const AfkAlert = ({ isUserActive, setIsUserActive }) => {
             activityTimer = setTimeout(() => {
                 setIsUserActive(false);
                 playAlertSound();
-            }, 300000);
+            }, 500000);
         };
 
         const playAlertSound = () => {
