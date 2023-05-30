@@ -1,47 +1,15 @@
 import React from 'react'
 import "./defectEntryPopup.css"
 import Keyboard from '../keyboard/Keyboard'
-import { useState, useEffect } from 'react';
+import { useEffect, useContext } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom'
 import Button from '../button/Button';
+import { KeyboardContext } from '../../context/KeyboardContext'
 
 function DefectEntryPopup({ onClose }) {
-
-    // KEYBOARD FUNCTIONS
-    const [isInputFocused, setIsInputFocused] = useState(false);
-    const [focusedInput, setFocusedInput] = useState("");
-    const [inputValues, setInputValues] = useState({
-        hataSorumlusu: "",
-        hataSinifi: "",
-        exitDepartment: "",
-        aciklama: "",
-        islem: "",
-        altSorumlu: "",
-        rdd: "",
-    });
-
-    const handleKeyPressed = (key) => {
-        if (isInputFocused && focusedInput !== "") {
-            if (key === 'delete') {
-                setInputValues(prevValues => ({
-                    ...prevValues,
-                    [focusedInput]: prevValues[focusedInput].slice(0, -1)
-                }));
-            } else {
-                setInputValues(prevValues => ({
-                    ...prevValues,
-                    [focusedInput]: prevValues[focusedInput] + key
-                }));
-            }
-        }
-    };
-
-    const handleInputFocused = (inputName) => {
-        setIsInputFocused(true);
-        setFocusedInput(inputName);
-    };
+    const {inputValues, handleInputFocused} = useContext(KeyboardContext)
 
     // NAVIGATION
     const handlePopupClose = () => {
@@ -270,7 +238,7 @@ function DefectEntryPopup({ onClose }) {
                     </div>
                 </div>
                 <div className='keyboard-component-grid'>
-                    <Keyboard onKeyPressed={handleKeyPressed} />
+                    <Keyboard />
                 </div>
             </div>
         </div>

@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./keyboard.css"
+import { KeyboardContext } from '../../context/KeyboardContext'
 
 function Keyboard(props) {
+    const {handleKeyPressed} = useContext(KeyboardContext)
+    
     const [shift, setShift] = useState(false);
 
     const keys = [
@@ -80,9 +83,9 @@ function Keyboard(props) {
         if (key === "shift") {
             setShift(!shift);
         } else if (key === "delete") {
-            props.onKeyPressed("delete");
+            props.handleKeyPressed("delete");
         } else {
-            props.onKeyPressed(shift ? key.toUpperCase() : key);
+            props.handleKeyPressed(shift ? key.handleKeyPressed() : key);
         }
     };
     
@@ -95,7 +98,7 @@ function Keyboard(props) {
                         {row.map(({ label, value, className }) => (
                             <button
                                 key={label}
-                                onClick={() => handleKeyPress(value)}
+                                onClick={() => handleKeyPressed(value)}
                                 className={className}
                             >
                                 {shift ? label.toUpperCase() : label}

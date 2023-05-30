@@ -4,43 +4,14 @@ import DateShift from "../../components/date-shift/DateShift"
 import Button from "../../components/button/Button"
 import Keyboard from "../../components/keyboard/Keyboard"
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom'
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import { KeyboardContext } from '../../context/KeyboardContext'
 
 function TerminalLogin() {
-
-    // KEYBOARD FUNCTIONS
-    const [isInputFocused, setIsInputFocused] = useState(false);
-    const [focusedInput, setFocusedInput] = useState("");
-    const [inputValues, setInputValues] = useState({
-        sicilNo: "",
-        password: "",
-        montajNo: ""
-    });
-
-    const handleKeyPressed = (key) => {
-        if (isInputFocused && focusedInput !== "") {
-            if (key === 'delete') {
-                setInputValues(prevValues => ({
-                    ...prevValues,
-                    [focusedInput]: prevValues[focusedInput].slice(0, -1)
-                }));
-            } else {
-                setInputValues(prevValues => ({
-                    ...prevValues,
-                    [focusedInput]: prevValues[focusedInput] + key
-                }));
-            }
-        }
-    };
-
-    const handleInputFocused = (inputName) => {
-        setIsInputFocused(true);
-        setFocusedInput(inputName);
-    };
-
+    const {inputValues, handleInputFocused} = useContext(KeyboardContext)
 
     // FETCHING DATA
     const [veri, setVeri] = useState([])
@@ -205,7 +176,7 @@ function TerminalLogin() {
                     </div>
                 </div>
                 <div className='keyboard-component-grid'>
-                    <Keyboard onKeyPressed={handleKeyPressed} />
+                    <Keyboard />
                 </div>
             </div>
         </div>

@@ -1,7 +1,7 @@
 import './defectList.css';
 import { useState, useEffect } from "react";
 import axios from "axios";
-import  NrReason  from "../../components/nr-reason/NrReason"
+import NrReason from "../../components/nr-reason/NrReason"
 import BottomGrid from "../../components/bottom-grid/BottomGrid"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSave } from '@fortawesome/free-regular-svg-icons';
@@ -61,7 +61,7 @@ function App() {
         <tbody className='tableBody'>
           {veri.map(({ data }) =>
             data.map(({ defectList }) =>
-              defectList.map(({ depCode, bodyNo,assyNo, vinNo,colorExtCode,modelCode,localId,partName,formattedDefectHour,defectCode,defrespName }) => 
+              defectList.map(({ depCode, bodyNo, assyNo, vinNo, colorExtCode, modelCode, localId, partName, formattedDefectHour, defectCode, defrespName }) =>
                 <tr>
                   <td>{depCode}</td>
                   <td>{bodyNo}</td>
@@ -71,15 +71,15 @@ function App() {
                   <td>{modelCode}</td>
                   <td>{localId}</td>
                   <td className='partName'>{partName}</td>
-                  <td>{}</td>
-                  <td>{}</td>
-                  <td>{}</td>
-                  <td>{}</td>
-                  <td>{}</td>
+                  <td>{ }</td>
+                  <td>{ }</td>
+                  <td>{ }</td>
+                  <td>{ }</td>
+                  <td>{ }</td>
                   <td>{formattedDefectHour}</td>
                   <td>{defectCode}</td>
                   <td>{defrespName}</td>
-                  <td>{}</td>
+                  <td>{ }</td>
                   <td>
                     <NrReason />
                   </td>
@@ -96,9 +96,9 @@ function App() {
           )}
         </tbody>
       </table>
-      <ToastContainer/>
+      <ToastContainer />
       <div className='bottom-grid'>
-        <BottomGrid/>
+        <BottomGrid />
       </div>
     </div>
   );
