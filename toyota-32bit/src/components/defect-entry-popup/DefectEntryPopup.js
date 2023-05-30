@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom'
+import Button from '../button/Button';
 
 function DefectEntryPopup({ onClose }) {
 
@@ -208,7 +209,7 @@ function DefectEntryPopup({ onClose }) {
                                     name='islem'
                                     placeholder='yapılan işlem'
                                     value={formik.values.islem}
-                                    onChange={formik.handleChange}  
+                                    onChange={formik.handleChange}
                                     onFocus={() => handleInputFocused("islem")}
                                     className={formik.touched.islem && formik.errors.islem ? 'error-input' : 'correct-input'}
                                 />
@@ -243,7 +244,7 @@ function DefectEntryPopup({ onClose }) {
                                     type='text'
                                     name='rdd'
                                     placeholder='rdd'
-                                    value={formik.values.rdd }
+                                    value={formik.values.rdd}
                                     onChange={formik.handleChange}
                                     onFocus={() => handleInputFocused("rdd")}
                                     className={formik.touched.rdd && formik.errors.rdd ? 'error-input' : 'correct-input'}
@@ -255,8 +256,16 @@ function DefectEntryPopup({ onClose }) {
                         </div>
 
                         <div className='form-row button-grid'>
-                            <button className='save' onClick={formik.handleSubmit}>KAYDET</button>
-                            <button className='cancel' onClick={handlePopupClose}>İPTAL</button>
+                            <Button
+                                className="save"
+                                onClick={formik.handleSubmit}
+                                text={"KAYDET"}
+                            />
+                            <Button
+                                className="cancel"
+                                onClick={handlePopupClose}
+                                text={"İPTAL"}
+                            />
                         </div>
                     </div>
                 </div>
