@@ -24,7 +24,7 @@ function Keyboard(props) {
             { className: "keys", label: t("keyboard.8"), value: t("keyboard.8") },
             { className: "keys", label: t("keyboard.9"), value: t("keyboard.9") },
             { className: "keys", label: t("keyboard.0"), value: t("keyboard.0") },
-            { className: "keys delete-key", label: "Delete", value: "delete" },
+            { className: "keys delete-key", label: t("keyboard.Delete"), value: "delete" },
         ],
         [
             { className: "keys", label: t("keyboard.@"), value: t("keyboard.@") },
@@ -43,7 +43,7 @@ function Keyboard(props) {
         ],
         [
             {
-                label: "Shift",
+                label: t("keyboard.Shift"),
                 value: "shift",
                 className: `keys shift-key ${shift ? "active" : ""}`,
             },
@@ -71,12 +71,12 @@ function Keyboard(props) {
             { className: "keys", label: t("keyboard.m"), value: t("keyboard.m") },
             { className: "keys", label: t("keyboard.<"), value: t("keyboard.<") },
             { className: "keys", label: t("keyboard.>"), value: t("keyboard.>") },
-            { className: "keys enter-key", label: "Enter", value: "enter" },
+            { className: "keys enter-key", label: t("keyboard.Enter"), value: "enter" },
 
         ],
         [
             {
-                label: "Space",
+                label: t("keyboard.Space"),
                 value: " ",
                 className: "keys space-key",
             },

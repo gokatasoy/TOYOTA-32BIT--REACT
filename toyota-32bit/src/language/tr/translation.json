@@ -71,6 +71,7 @@
         "p": "p",
         "double-dot": "ğ",
         ";": "ü",
+        "Shift": "Shift",
         "a": "a",
         "s": "s",
         "d": "d",
@@ -93,6 +94,7 @@
         "m": "m",     
         "<": "ö",     
         ">": "ç",     
-        "Enter": "Enter"    
+        "Enter": "Enter",    
+        "Space": "Space"    
     }
 }

@@ -4,7 +4,7 @@ import Backend from "i18next-http-backend";
 import LanguageDetector from "i18next-browser-languagedetector";
 import trTranslation from "./language/tr/translation.json";
 import enTranslation from "./language/en/translation.json";
-import jpTranslation from "./language/jp/translation.json";
+import jaTranslation from "./language/ja/translation.json";
 
 i18n
     .use(Backend)
@@ -14,7 +14,7 @@ i18n
         resources: {
             tr: { translation: trTranslation },
             en: { translation: enTranslation },
-            jp: { translation: jpTranslation },
+            ja: { translation: jaTranslation },
         },
         fallbackLng: "en",
         detection: {
