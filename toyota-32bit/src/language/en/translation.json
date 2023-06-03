@@ -1,5 +1,48 @@
 {
-    "greeting": "Hello!",
-    "welcome": "Welcome to my app.",
-    "button": "Click me!"
+    "common":{
+        "Assembly No": "Assembly No",
+        "Body No": "Body No",
+        "Defect Entry Page": "Defect Entry Page",
+        "Color": "Color",
+        "All Terminals": "All Terminals",
+        "Department Basis": "Department Basis",
+        "Filter Basis": "Filter Basis"
+    },
+    "form": {
+        "Terminal List": "Terminal List",
+        "Registiration No": "Registiration No",
+        "Password": "Password",
+        "Defect Responsible": "Defect Responsible",
+        "Defect Type": "Defect Type",
+        "Exit Department": "Exit Department",
+        "Description": "Description",
+        "Transaction Made": "Transaction Made",
+        "Sub-Responsible": "Sub-Responsible",
+        "RDD": "RDD",
+        "Date": "Date",
+        "Shift": "Shift"
+    },
+    "button": {
+        "Save": "Save",
+        "Cancel": "Cancel",
+        "Login": "Login",
+        "Logout": "Logout",
+        "Previous": "Previous",
+        "Model First Image": "Model First Picture",
+        "Defect List": "Defect List",
+        "Clear": "Clear",
+        "Big Font": "Big Font",
+        "Manifest": "Manifest",
+        "Common Defect": "Common Defect",
+        "Terminal First Image": "Terminal First Image",
+        "Search": "Search",
+        "Defect Save": "Defect Entry",
+        "Defect Entry": "Defect Entry",
+        "Save and Pass": "Save and Pass",
+        "Quick Save": "Quick Save",
+        "Vehicle List": "Vehicle List",
+        "Manuel Defect": "Manuel Defect",
+        "Multiple Defect": "Multiple Defect",
+        "Defect Copy": "Defect Copy"
+    }
 }

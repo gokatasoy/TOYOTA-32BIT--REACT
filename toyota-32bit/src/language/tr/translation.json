@@ -1,5 +1,48 @@
 {
-    "greeting": "Merhaba!",
-    "welcome": "Uygulamama hoş geldiniz.",
-    "button": "Bana tıkla!"
+    "common":{
+        "Assembly No": "Montaj No",
+        "Body No": "Body No",
+        "Defect Entry Page": "Hata Giriş Ekranı",
+        "Color": "Renk",
+        "All Terminals": "Tüm Terminaller",
+        "Department Basis": "Bölüm Bazında",
+        "Filter Basis": "Filtre Bazında"
+    },
+    "form":{
+        "Terminal List": "Terminal Listesi",
+        "Registiration No": "Sicil No",
+        "Password" : "Şifre",
+        "Defect Responsible": "Hata Sorumlusu",
+        "Defect Type": "Hata Sınıfı",
+        "Exit Department": "Exit Department",
+        "Description": "Açıklama",
+        "Transaction Made": "Yapılan İşlem",
+        "Sub-Responsible": "Alt Sorumlu",
+        "RDD": "RDD",
+        "Date": "Tarih",
+        "Shift": "Vardiya"
+    },
+    "button":{
+        "Save": "Kaydet",
+        "Cancel": "İptal",
+        "Login": "Giriş Yap",
+        "Logout": "Çıkış Yap",
+        "Previous": "Geri",
+        "Model First Image": "Model İlk Resmi",
+        "Defect List": "Hata Listesi",
+        "Clear": "Temizle",
+        "Big Font": "Büyük Font",
+        "Manifest": "Manifest",
+        "Common Defect": "Sık Gelen Hata",
+        "Terminal First Image": "Terminal İlk Resmi",
+        "Search": "Ara",
+        "Defect Save": "Hata Kayıt",
+        "Defect Entry": "Hata Giriş",
+        "Save and Pass": "Kaydet ve Geç",
+        "Quick Save": "Hızlı Kaydet",
+        "Vehicle List": "Araç Listesi",
+        "Manuel Defect": "Manuel Hata",
+        "Multiple Defect": "Çoklu Hata",
+        "Defect Copy": "Hata Kopya"
+    }
 }
