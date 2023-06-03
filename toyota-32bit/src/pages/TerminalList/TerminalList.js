@@ -3,8 +3,11 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 // import { BrowserRouter as Router } from 'react-router-dom';
+import { useTranslation } from 'react-i18next'
 
 function TerminalList() {
+    const { t } = useTranslation();
+
     const [veri, setVeri] = useState([]);
     let navigate = useNavigate();
 
@@ -24,10 +27,10 @@ function TerminalList() {
     return (
         <div className="terminal-list-grid">
             <div className='terminal-list-header-container'>
-                <div className='main-header-h1'>TÜM TERMİNALLER</div>
+                <div className='main-header-h1'>{t("common.All Terminals")}</div>
                 <div className='container'>
-                    <div className='section-header-h2'>BÖLÜM BAZINDA</div>
-                    <div className='filter-header-h2'>FİLTRE BAZINDA</div>
+                    <div className='section-header-h2'>{t("common.Department Basis")}</div>
+                    <div className='filter-header-h2'>{t("common.Filter Basis")}</div>
                 </div>
             </div>
 

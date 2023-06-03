@@ -2,8 +2,11 @@ import React from 'react'
 import "./defectPageHeader.css"
 import axios from 'axios'
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next'
 
 function DefectPageHeader() {
+    const { t } = useTranslation();
+
     const [veri, setVeri] = useState([]);
     useEffect(() => {
         axios.get("./header-data.json")
@@ -20,21 +23,21 @@ function DefectPageHeader() {
                 <div className='defect-page-container-component'>
                     <div className='container-left'>
                         <div className='montaj-no-container'>
-                            <div>MONTAJ NO</div>
+                            <div>{t("common.Assembly No")}</div>
                             <div>{assyNo}</div>
                         </div>
                         <div className='body-no-container'>
-                            <div>BODY NO</div>
+                            <div>{t("common.Body No")}</div>
                             <div>{bodyNo}</div>
                         </div>
                         <div className='page-title-container'>
-                            <div>HATA GİRİŞ EKRANI</div>
+                            <div>{t("common.Defect Entry Page")}</div>
                         </div>
                     </div>
                     
                     <div className='container-right'>
                         <div style={{backgroundColor: bgColor}} className='color-container'>
-                            <div>Renk</div>
+                            <div>{t("common.Color")}</div>
                             <div>{extCode}</div>
                         </div>
                         <div className='username-container'>

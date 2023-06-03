@@ -7,8 +7,11 @@ import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom'
 import Button from '../button/Button';
 import { KeyboardContext } from '../../context/KeyboardContext'
+import { useTranslation } from 'react-i18next'
 
 function DefectEntryPopup({ onClose }) {
+    const { t } = useTranslation();
+
     const {inputValues, handleInputFocused} = useContext(KeyboardContext)
 
     // NAVIGATION
@@ -92,18 +95,18 @@ function DefectEntryPopup({ onClose }) {
             <div className='defect-entry-popup-container'>
                 <div className='row top-bar'>
                     <div className='terminal-name'>CVWQS</div>
-                    <div className='common-defect'>SIK GELEN HATA</div>
+                    <div className='common-defect'>{t("button.Common Defect")}</div>
                 </div>
                 <div className='row'>
                     <div className='form-container'>
 
                         <div className='form-row'>
-                            <label>Hata Sorumlusu:</label>
+                            <label>{t("form.Defect Responsible")}:</label>
                             <div className='input-container'>
                                 <input
                                     type='text'
                                     name='hataSorumlusu'
-                                    placeholder='hata sorumlusu'
+                                    placeholder={t("form.Defect Responsible")}
                                     value={formik.values.hataSorumlusu}
                                     onChange={formik.handleChange}
                                     onFocus={() => handleInputFocused("hataSorumlusu")}
@@ -116,12 +119,12 @@ function DefectEntryPopup({ onClose }) {
                         </div>
 
                         <div className='form-row'>
-                            <label>Hata Sınıfı:</label>
+                            <label>{t("form.Defect Type")}:</label>
                             <div className='input-container'>
                                 <input
                                     type='text'
                                     name='hataSinifi'
-                                    placeholder='hata sınıfı'
+                                    placeholder={t("form.Defect Type")}
                                     value={formik.values.hataSinifi}
                                     onChange={formik.handleChange}
                                     onFocus={() => handleInputFocused("hataSinifi")}
@@ -134,12 +137,12 @@ function DefectEntryPopup({ onClose }) {
                         </div>
 
                         <div className='form-row'>
-                            <label>Exit Department:</label>
+                            <label>{t("form.Exit Department")}:</label>
                             <div className='input-container'>
                                 <input
                                     type='text'
                                     name='exitDepartment'
-                                    placeholder='exit department'
+                                    placeholder={t("form.Exit Department")}
                                     value={formik.values.exitDepartment}
                                     onChange={formik.handleChange}
                                     onFocus={() => handleInputFocused("exitDepartment")}
@@ -152,12 +155,12 @@ function DefectEntryPopup({ onClose }) {
                         </div>
 
                         <div className='form-row'>
-                            <label>Açıklama:</label>
+                            <label>{t("form.Description")}:</label>
                             <div className='input-container'>
                                 <input
                                     type='text'
                                     name='aciklama'
-                                    placeholder='açıklama'
+                                    placeholder={t("form.Description")}
                                     value={formik.values.aciklama}
                                     onChange={formik.handleChange}
                                     onFocus={() => handleInputFocused("aciklama")}
@@ -170,12 +173,12 @@ function DefectEntryPopup({ onClose }) {
                         </div>
 
                         <div className='form-row'>
-                            <label>Yapılan İşlem:</label>
+                            <label>{t("form.Transaction Made")}:</label>
                             <div className='input-container'>
                                 <input
                                     type='text'
                                     name='islem'
-                                    placeholder='yapılan işlem'
+                                    placeholder={t("form.Transaction Made")}
                                     value={formik.values.islem}
                                     onChange={formik.handleChange}
                                     onFocus={() => handleInputFocused("islem")}
@@ -188,12 +191,12 @@ function DefectEntryPopup({ onClose }) {
                         </div>
 
                         <div className='form-row'>
-                            <label>Alt Sorumlu:</label>
+                            <label>{t("form.Sub-Responsible")}:</label>
                             <div className='input-container'>
                                 <input
                                     type='text'
                                     name='altSorumlu'
-                                    placeholder='alt sorumlu'
+                                    placeholder={t("form.Sub-Responsible")}
                                     value={formik.values.altSorumlu}
                                     onChange={formik.handleChange}
                                     onFocus={() => handleInputFocused("altSorumlu")}
@@ -206,12 +209,12 @@ function DefectEntryPopup({ onClose }) {
                         </div>
 
                         <div className='form-row'>
-                            <label>RDD:</label>
+                            <label>{t("form.RDD")}:</label>
                             <div className='input-container'>
                                 <input
                                     type='text'
                                     name='rdd'
-                                    placeholder='rdd'
+                                    placeholder={t("form.RDD")}
                                     value={formik.values.rdd}
                                     onChange={formik.handleChange}
                                     onFocus={() => handleInputFocused("rdd")}
@@ -227,12 +230,12 @@ function DefectEntryPopup({ onClose }) {
                             <Button
                                 className="save"
                                 onClick={formik.handleSubmit}
-                                text={"KAYDET"}
+                                text={t("button.Save")}
                             />
                             <Button
                                 className="cancel"
                                 onClick={handlePopupClose}
-                                text={"İPTAL"}
+                                text={t("button.Cancel")}
                             />
                         </div>
                     </div>

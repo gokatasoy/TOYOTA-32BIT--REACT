@@ -6,8 +6,10 @@ import { useNavigate } from "react-router-dom";
 import AssyNo from "../../components/assy-no/AssyNo";
 import DefectEntryPopup from "../../components/defect-entry-popup/DefectEntryPopup";
 import AfkAlert from "../../components/afk-alert/AfkAlert";
+import { useTranslation } from 'react-i18next'
 
 function DefectPage() {
+    const { t } = useTranslation();
 
     // AFK ALERT
     const [isUserActive, setIsUserActive] = useState(true);
@@ -53,18 +55,18 @@ function DefectPage() {
                         <DefectedCar />
                         <div className="col-2 button-container button-container-bottom">
                             <div className="button" onClick={handleCloseClick}>
-                                ÇIKIŞ
+                                {t("button.Cancel")}
                             </div>
                             <div className="button" onClick={handleBackClick}>
-                                GERİ
+                                {t("button.Back")}
                             </div>
-                            <div className="button">MODEL İLK RESMİ</div>
+                            <div className="button">{t("button.Model First Image")}</div>
                             <div className="button" onClick={handleDefectListClick}>
-                                HATA LİSTESİ
+                                {t("button.Defect List")}
                             </div>
-                            <div className="button">TEMİZLE</div>
+                            <div className="button">{t("button.Clear")}</div>
                             <div className="button" onClick={handleBigFontClick}>
-                                BÜYÜK FONT
+                                {t("button.Big Font")}
                             </div>
                         </div>
                     </div>
@@ -86,15 +88,15 @@ function DefectPage() {
                         </div>
 
                         <div className="button-container button-container-right">
-                            <div className="button">HIZLI KAYDET</div>
-                            <div className="button">KAYDET VE GEÇ</div>
-                            <div className="button" onClick={handlePopupclick}>HATA KAYIT</div>
+                            <div className="button">{t("button.Quick Save")}</div>
+                            <div className="button">{t("button.Save and Pass")}</div>
+                            <div className="button" onClick={handlePopupclick}>{t("button.Defect Entry")}</div>
                             <div>
                                 <AssyNo />
                             </div>
-                            <div className="button">TERMİNAL İLK RESMİ</div>
-                            <div className="button">SIK GELEN HATA</div>
-                            <div className="button">MANİFEST</div>
+                            <div className="button">{t("button.Terminal First Image")}</div>
+                            <div className="button">{t("button.Common Defect")}</div>
+                            <div className="button">{t("button.Manifest")}</div>
                         </div>
                     </div>
 

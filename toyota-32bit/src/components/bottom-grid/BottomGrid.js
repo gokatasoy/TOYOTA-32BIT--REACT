@@ -3,8 +3,11 @@ import "./bottomGrid.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next'
 
 function BottomGrid() {
+    const { t } = useTranslation();
+
     let navigate = useNavigate();
 
     const handleCloseClick = () => {
@@ -15,24 +18,24 @@ function BottomGrid() {
         <div className='BottomGrid'>
             <div className='montaj-body'>
                 <div className='bottomGridSection'>
-                    <label>MONTAJ NO:</label>
+                    <label>{t("common.Assembly No")}:</label>
                     <input className='bottomGridInput'/>
-                    <span className='search-button'>ARA</span>
+                    <span className='search-button'>{t("button.Search")}</span>
                     <FontAwesomeIcon className='updown-button' icon={faChevronUp} />
                 </div>
                 <div className='bottomGridSection'>
-                    <label>BODY NO:</label>
+                    <label>{t("common.Body No")}:</label>
                     <input className='bottomGridInput'/>
-                    <span className='search-button'>ARA</span>
+                    <span className='search-button'>{t("button.Search")}</span>
                     <FontAwesomeIcon className='updown-button' icon={faChevronDown} />
                 </div>
             </div>
-            <div className='car-list'>ARAÇ LİSTESİ</div>
-            <div className='manuel-error'>MANUEL HATA</div>
-            <div className='multiple-error'>ÇOKLU HATA</div>
-            <div className='error-list'>HATA LİSTESİ</div>
-            <div className='error-copy'>HATA KOPYA</div>
-            <div className='exit' onClick={handleCloseClick}>ÇIKIŞ YAP</div>
+            <div className='car-list'>{t("button.Vehicle List")}</div>
+            <div className='manuel-error'>{t("button.Vehicle List")}</div>
+            <div className='multiple-error'>{t("button.Multiple Defect")}</div>
+            <div className='error-list'>{t("button.Defect List")}</div>
+            <div className='error-copy'>{t("button.Defect Copy")}</div>
+            <div className='exit' onClick={handleCloseClick}>{t("button.Logout")}</div>
         </div>
     )
 }

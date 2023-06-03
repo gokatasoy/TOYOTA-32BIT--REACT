@@ -1,8 +1,11 @@
 import React from 'react'
 import "./dateShift.css"
+import { useTranslation } from 'react-i18next'
 import { useState } from 'react';
 
 function DateShift() {
+    const { t } = useTranslation();
+
     const themes = {
         mavi:{
             backgroundColor:"blue"
@@ -22,7 +25,7 @@ function DateShift() {
     return (
         <div className='container-dateShift'>
             <div className='date-shift' style={theme}>
-                <span className='title'>Tarih:</span>
+                <span className='title'>{t("form.Date")}:</span>
                 <select className='gun'>
                     <option value="1">01</option>
                     <option value="2">02</option>
@@ -77,7 +80,7 @@ function DateShift() {
                     <option value="2000">2023</option>
                 </select>
                 
-                <span className='title'>Vardiya:</span>
+                <span className='title'>{t("form.Shift")}:</span>
                 <select className='vardiya' onChange={handleShiftChange}>
                     <option value="mavi">M</option>
                     <option value="kirmizi">K</option>

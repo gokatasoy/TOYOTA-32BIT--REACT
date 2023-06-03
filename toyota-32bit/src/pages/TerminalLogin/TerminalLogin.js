@@ -9,9 +9,12 @@ import { useNavigate } from 'react-router-dom'
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { KeyboardContext } from '../../context/KeyboardContext'
+import { useTranslation } from 'react-i18next'
 
 function TerminalLogin() {
-    const {inputValues, handleInputFocused} = useContext(KeyboardContext)
+    const { t } = useTranslation();
+
+    const { inputValues, handleInputFocused } = useContext(KeyboardContext)
 
     // FETCHING DATA
     const [veri, setVeri] = useState([])
@@ -85,7 +88,7 @@ function TerminalLogin() {
                     <div className='form-container'>
 
                         <div className='form-row terminal-list'>
-                            <label>Terminal Listesi:</label>
+                            <label>{t("form.Terminal List")}</label>
                             <div className='input-container'>
                                 <select
                                     className={`select-terminal-list ${formik.touched.terminalList && formik.errors.terminalList ? 'error-input' : 'correct-input'}`}
@@ -101,11 +104,11 @@ function TerminalLogin() {
                         </div>
 
                         <div className='form-row'>
-                            <label>Sicil No:</label>
+                            <label>{t("form.Registiration No")}</label>
                             <div className='input-container'>
                                 <input
                                     type="text"
-                                    placeholder='sicil no'
+                                    placeholder={t("form.Registiration No")}
                                     name="sicilNo"
                                     onChange={formik.handleChange}
                                     onFocus={() => handleInputFocused("sicilNo")}
@@ -120,11 +123,11 @@ function TerminalLogin() {
                         </div>
 
                         <div className='form-row'>
-                            <label>Şifre:</label>
+                            <label>{t("form.Password")}</label>
                             <div className='input-container'>
                                 <input
                                     type="password"
-                                    placeholder='şifre'
+                                    placeholder={t("form.Password")}
                                     name="password"
                                     onChange={formik.handleChange}
                                     onFocus={() => handleInputFocused("password")}
@@ -139,11 +142,11 @@ function TerminalLogin() {
                         </div>
 
                         <div className='form-row'>
-                            <label>Montaj No:</label>
+                            <label>{t("common.Assembly No")}</label>
                             <div className='input-container'>
                                 <input
                                     type="text"
-                                    placeholder='montaj no'
+                                    placeholder={t("common.Assembly No")}   
                                     name="montajNo"
                                     onChange={formik.handleChange}
                                     onFocus={() => handleInputFocused("montajNo")}
@@ -165,12 +168,12 @@ function TerminalLogin() {
                             <Button
                                 className="giris"
                                 onClick={formik.handleSubmit}
-                                text={"Giriş Yap"}
+                                text={t("button.Login")}
                             />
                             <Button
                                 className="kapat"
                                 onClick={handleCloseClick}
-                                text={"Kapat"}
+                                text={t("button.Cancel")}
                             />
                         </div>
                     </div>
