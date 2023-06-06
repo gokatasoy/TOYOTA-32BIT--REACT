@@ -3,39 +3,45 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
 }
 
 .App {
-  font-size: smaller;
   background-color: #B3E5BE;
   display: flex;
   flex-direction: column;
 }
 
-/* HEADER AND CELLS */
+.data-grid{
+  display: flex;
+  height: 80vh;
+}
+
+/* MUI HEADER AND CELLS */
 .headerStyle {
-  font-weight: bolder !important;
   display: flex !important;
   justify-content: center !important;
   border: 1px solid grey !important;
+  white-space: normal !important;
+  word-wrap: break-word;
+  font-size: 17px;
+  font-weight: 900 !important;
 }
 
 .cellStyle {
   display: flex !important;
   justify-content: center !important;
   border: 1px solid grey !important;
-}
-
-.partName {
-  color: #B22727;
-  font-weight: 600;
   white-space: normal !important;
   word-wrap: break-word;
+  padding: 4px !important;
+  font-size: 17px;
+}
+
+.partNameStyle {
+  color: #B22727;
+  font-weight: 900;
+  border: none !important;
   font-size: 12px;
-  border: 1px solid black !important;
-  display: flex !important;
-  justify-content: center !important;
 }
 
 /* ICONS */
@@ -43,11 +49,10 @@
   color: white;
   background-color: black;
   width: 100%;
-  font-size: 20px;
+  font-size: 25px;
   border: 1px solid;
   border-radius: 5px;
-  padding-top: .15rem;
-  padding-bottom: .15rem;
+  padding: .4rem;
 }
 
 .saveIcon:hover {
@@ -62,9 +67,11 @@
   background-color: red;
   border: 1px solid;
   border-radius: 5px;
-  padding: 5px 10px;
+  /* padding: 5px 10px; */
   margin-right: 5px;
-  width: 1.2rem;
+  width: 1rem;
+  padding: .6rem;
+
 }
 
 .editIcon:hover,
