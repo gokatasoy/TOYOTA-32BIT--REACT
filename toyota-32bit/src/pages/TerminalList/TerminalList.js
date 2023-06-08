@@ -24,10 +24,17 @@ function TerminalList() {
         navigate('/terminal-login');
     }
 
+    const handleBackClick = () => {
+        navigate("/")
+    }
+
     return (
         <div className="terminal-list-grid">
             <div className='terminal-list-header-container'>
-                <div className='main-header-h1'>{t("common.All Terminals")}</div>
+                <div className='container'>
+                    <div className='main-header-h1'>{t("common.All Terminals")}</div>
+                    <button onClick={handleBackClick}>Back</button>
+                </div>
                 <div className='container'>
                     <div className='section-header-h2'>{t("common.Department Basis")}</div>
                     <div className='filter-header-h2'>{t("common.Filter Basis")}</div>

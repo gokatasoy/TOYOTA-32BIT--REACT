@@ -1,4 +1,5 @@
 import './App.css';
+import StartPage from "./pages/StartPage/StartPage"
 import TerminalList from './pages/TerminalList/TerminalList';
 import TerminalLogin from './pages/TerminalLogin/TerminalLogin';
 import DefectPage from './pages/DefectPage/DefectPage';
@@ -15,7 +16,8 @@ function App() {
       <KeyboardProvider>
         <div className="App">
           <Routes>
-            <Route path='/' element={<TerminalList/>} />
+            <Route path='/' element={<StartPage/>} />
+            <Route path='/terminal-list' element={<TerminalList/>} />
             <Route path='/terminal-login' element={<TerminalLogin/>} />
             <Route path='/defect-page' element={<DefectPage/>} />
             <Route path='/big-font' element={<BigFont/>} />
