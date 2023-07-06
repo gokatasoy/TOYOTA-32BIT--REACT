@@ -1,11 +1,21 @@
-.BottomGrid{
-    display: flex;
-    height: 20vh;
-    background-color: #e6e6e6;
-    border: 1px solid;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.montaj-body{
+.bottom-grid {
+    display: flex;
+    height: 15vh;
+    background-color: #e6e6e6;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/* MONTAJ-BODY */
+.bottom-grid .montaj-body {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
@@ -13,19 +23,19 @@
     border: 1px solid;
     border-radius: 10px;
     margin: 10px;
-    padding: 37px;
-    width: 40%;
+    padding: 12px;
+    width: 37%;
     font-weight: 700;
-    font-size: 25px;
+    font-size: 20px;
 }
 
-.bottomGridSection {
+.bottom-grid .bottom-grid-section {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.bottomGridInput {
+.bottom-grid-section .bottom-grid-input {
     margin-left: 5px;
     width: 225px;
     padding: 4px 15px;
@@ -35,8 +45,7 @@
     border: 1px solid gray;
 }
 
-/* SEARCH BUTTON */
-.search-button {
+.bottom-grid-section .search-button {
     padding: 8px 16px;
     border: 1px solid;
     border-radius: 4px;
@@ -47,18 +56,18 @@
     margin-right: 20px;
 }
 
-.search-button:hover{
+.bottom-grid-section .search-button:hover {
     background-color: #a6a6a6;
     transition: .2s;
 }
 
-.search-button:active{
+.bottom-grid-section .search-button:active {
     background-color: #737373;
     transition: .2s;
 }
 
-/* UPDOWN BUTTON */
-.updown-button{
+/* updown button */
+.bottom-grid-section .updown-button {
     background-color: red !important;
     width: 80px;
     text-align: center;
@@ -70,31 +79,33 @@
     user-select: none;
 }
 
-.updown-button:hover{
-    background-color: #e60000 !important; 
+.bottom-grid-section .updown-button:hover {
+    background-color: #e60000 !important;
     transition: .2s;
 }
 
-.updown-button:active{
+.bottom-grid-section .updown-button:active {
     background-color: #fff !important;
     color: #e60000;
 }
 
-/* RANDOM BUTTONS */
-.car-list,
-.manuel-error,
-.multiple-error,
-.error-list,
-.error-copy,
-.exit{
+/* BUTTON CONTAINER  */
+.bottom-grid .button-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.bottom-grid-button {
     border: 1px solid;
     border-radius: 10px;
     margin: 10px;
     padding: 30px;
-    width: 10% ;
+    width: 11%;
     display: flex;
-    text-align: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    text-align: center;
     font-size: 25px;
     font-weight: 700;
     background-color: #cccccc;
@@ -102,22 +113,84 @@
     user-select: none;
 }
 
-.car-list:hover,
-.manuel-error:hover,
-.multiple-error:hover,
-.error-list:hover,
-.error-copy:hover,
-.exit:hover{
+.bottom-grid-button:hover {
     background-color: #a6a6a6;
     transition: .2s;
 }
 
-.car-list:active,
-.manuel-error:active,
-.multiple-error:active,
-.error-list:active,
-.error-copy:active,
-.exit:active{
+.bottom-grid-button:active {
     background-color: #737373;
     transition: .2s;
 }
+
+
+@media screen and (max-width: 1787px) {
+    .bottom-grid-section .bottom-grid-input {     
+        width: 180px;
+    }
+
+    .bottom-grid-button {
+        padding: 36px;
+        /* width: 11%; */
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-device-width:1504px) and (max-device-width:1786px) {
+    .bottom-grid-button {
+        padding: 42px;
+        /* width: 11%; */
+        font-size: 15px;
+    }
+
+    .bottom-grid .montaj-body {
+        margin: 10px;
+        width: 37%;
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-device-width:1324px) and (max-device-width:1503px) {
+    .bottom-grid-section .bottom-grid-input {     
+        width: 150px;
+    }
+
+    .bottom-grid-section .updown-button {
+        width: 40px;
+    }
+
+    .bottom-grid-button {
+        padding: 41px 27px;
+        font-size: 15px;
+    }
+
+    .bottom-grid .montaj-body {
+        margin: 10px;
+        width: 37%;
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-device-width:1144) and (max-device-width:1323px) {
+    .bottom-grid-section .bottom-grid-input {     
+        width: 100px;
+    }
+
+    .bottom-grid-section .updown-button {
+        width: 30px;
+    }
+
+    .bottom-grid-button {
+        padding: 41px 13px;
+        font-size: 15px;
+    }
+
+    .bottom-grid .montaj-body {
+        margin: 10px;
+        width: 37%;
+        font-size: 15px;
+    }
+}
+
+
+

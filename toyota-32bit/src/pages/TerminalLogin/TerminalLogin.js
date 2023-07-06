@@ -37,7 +37,7 @@ function TerminalLogin() {
     };
 
     const handleCloseClick = () => {
-        navigate("/");
+        navigate("/terminal-list");
     };
 
 

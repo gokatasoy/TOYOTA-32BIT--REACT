@@ -15,27 +15,29 @@ function BottomGrid() {
     }
 
     return (
-        <div className='BottomGrid'>
+        <div className='bottom-grid'>
             <div className='montaj-body'>
-                <div className='bottomGridSection'>
+                <div className='bottom-grid-section'>
                     <label>{t("common.Assembly No")}:</label>
-                    <input className='bottomGridInput'/>
+                    <input className='bottom-grid-input'/>
                     <span className='search-button'>{t("button.Search")}</span>
                     <FontAwesomeIcon className='updown-button' icon={faChevronUp} />
                 </div>
-                <div className='bottomGridSection'>
+                <div className='bottom-grid-section'>
                     <label>{t("common.Body No")}:</label>
-                    <input className='bottomGridInput'/>
+                    <input className='bottom-grid-input'/>
                     <span className='search-button'>{t("button.Search")}</span>
                     <FontAwesomeIcon className='updown-button' icon={faChevronDown} />
                 </div>
             </div>
-            <div className='car-list'>{t("button.Vehicle List")}</div>
-            <div className='manuel-error'>{t("button.Vehicle List")}</div>
-            <div className='multiple-error'>{t("button.Multiple Defect")}</div>
-            <div className='error-list'>{t("button.Defect List")}</div>
-            <div className='error-copy'>{t("button.Defect Copy")}</div>
-            <div className='exit' onClick={handleCloseClick}>{t("button.Logout")}</div>
+            <div className='button-container'>
+                <div className='bottom-grid-button'>{t("button.Vehicle List")}</div>
+                <div className='bottom-grid-button'>{t("button.Defect List")}</div>
+                <div className='bottom-grid-button'>{t("button.Multiple Defect")}</div>
+                <div className='bottom-grid-button'>{t("button.Defect List")}</div>
+                <div className='bottom-grid-button'>{t("button.Defect Copy")}</div>
+                <div className='bottom-grid-button' onClick={handleCloseClick}>{t("button.Logout")}</div>
+            </div>
         </div>
     )
 }
